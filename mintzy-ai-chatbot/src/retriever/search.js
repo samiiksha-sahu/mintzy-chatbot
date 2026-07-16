@@ -37,26 +37,6 @@ function cosineSimilarity(a, b) {
   return dot / (Math.sqrt(magA) * Math.sqrt(magB));
 }
 
-async function search(query, topK = 5, minScore = 0.10) {
-  await loadModel();
-
-  const embedding = await embedder(query, {
-    pooling: "mean",
-    normalize: true,
-  });
-
-  const vector = Array.from(embedding.data);
-
-  const scored = database.map(doc => ({
-    ...doc,
-    score: cosineSimilarity(vector, doc.embedding),
-  }));
-
-  scored.sort((a, b) => b.score - a.score);
-
-  return scored.filter(doc => doc.score >= minScore).slice(0, topK);
-}
-
 function expandPriceNeighbors(results, allDocs) {
   const expanded = [...results];
   const seen = new Set(results.map((r) => `${r.source}#${r.chunk}`));
@@ -84,7 +64,15 @@ function expandPriceNeighbors(results, allDocs) {
   return expanded;
 }
 
-async function search(query, topK = 5, minScore = 0.10) {
+/**
+ * @param {string} query
+ * @param {number} topK
+ * @param {number} minScore
+ * @param {string|null} sourceFilter - restrict candidates to one source file,
+ *   e.g. "plugin.txt". Used by chat.js for known-topic questions so the whole
+ *   file isn't dumped — only the semantically relevant section(s) are.
+ */
+async function search(query, topK = 5, minScore = 0.10, sourceFilter = null) {
   await loadModel();
 
   const embedding = await embedder(query, {
@@ -94,14 +82,24 @@ async function search(query, topK = 5, minScore = 0.10) {
 
   const vector = Array.from(embedding.data);
 
-  const scored = database.map(doc => ({
+  const candidates = sourceFilter
+    ? database.filter((doc) => doc.source === sourceFilter)
+    : database;
+
+  const scored = candidates.map((doc) => ({
     ...doc,
     score: cosineSimilarity(vector, doc.embedding),
   }));
 
   scored.sort((a, b) => b.score - a.score);
 
-  return scored.filter(doc => doc.score >= minScore).slice(0, topK);
+  let results = scored.filter((doc) => doc.score >= minScore).slice(0, topK);
+
+  if (/price|pricing|cost|₹|plan/i.test(query)) {
+    results = expandPriceNeighbors(results, candidates);
+  }
+
+  return results;
 }
 
 function getPriceChunksForSource(source) {

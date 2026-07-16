@@ -183,9 +183,24 @@ async function chat(question, history = []) {
   let historyForModel = recentHistory;
 
   if (inferredSource) {
-    const fullText = loadFullFile(inferredSource);
-    context = fullText ? fullText.slice(0, MAX_CONTEXT_CHARS) : "";
-    console.log(`--- USING FULL FILE: ${inferredSource} (${context.length} chars) ---`);
+    // Known topic (e.g. "plugin") — search WITHIN that file instead of
+    // dumping the whole thing, so questions like "what is plugin" only
+    // pull the relevant section instead of Overview + pricing + everything.
+    const retrievalQuery = buildRetrievalQuery(workingQuestion, recentHistory);
+    const docs = await search(retrievalQuery, 4, 0.20, inferredSource);
+    console.log(`--- TOPIC-FILTERED SEARCH: ${inferredSource} ---`);
+    docs.forEach((d) => console.log(`[${d.source} #${d.chunk}] score=${d.score.toFixed(3)}`));
+    console.log("------------------------------------------");
+
+    if (docs.length > 0) {
+      context = docs.map((doc) => doc.text).join("\n\n").slice(0, MAX_CONTEXT_CHARS);
+    } else {
+      // Nothing scored well enough within the file — fall back to the
+      // full file rather than returning an empty-context answer.
+      const fullText = loadFullFile(inferredSource);
+      context = fullText ? fullText.slice(0, MAX_CONTEXT_CHARS) : "";
+      console.log(`--- FALLBACK TO FULL FILE: ${inferredSource} (${context.length} chars) ---`);
+    }
 
     historyForModel = recentHistory.filter((turn) => matchTopic(turn.question) === inferredSource);
   } else {
