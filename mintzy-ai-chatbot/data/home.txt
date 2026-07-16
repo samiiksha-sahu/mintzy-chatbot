@@ -1,0 +1,179 @@
+Financial Clarity
+for every Investor & Trader
+Mintzy provides smart financial tools designed for clarity and transparency. Access real-time insights from global markets through APIs, Broker Independent Seed, and Custom Plugins.
+Demo with Founder
+Why Mintzy?
+Custom Investment Strategies
+Every investment strategy is built to match your unique financial goals and risk profile
+Personalized Market Forecasting
+Mintzy generates tailored market forecasts using adaptive data driven mathematical models.
+Autonomous Adaptive Intelligence
+Our Adaptive Data Pipeline encompasses current market volatility and liquidity in determining market trajectories.
+Integrated Risk Management
+Our custom extension solutions provide risk profile driven market research thereby ensuring ideal financial planning.
+Solutions for Institutions
+Mintzy offers custom Plug & Play frameworks for providing automated swing trading & hedging services.
+Solutions for Individuals
+Our API setup delivers real-time market forecasts and actionable insights for traders globally.
+How Mintzy is different?
+Other Platforms
+Independent Intelligence Platform
+Mintzy operates as an independent research and analysis platform. It does not earn through brokerage influence or execution incentives which keeps insights objective.
+Broker Led Platforms
+Most platforms are tied to execution or distribution which can bias insights toward activity rather than decision quality.
+Deep Market Analysis
+Mintzy analyzes market data using research backed AI models with adaptive forecasting and contextual insights rather than surface level indicators.
+Shallow Analytics
+Insights are often rule based indicator driven or generic with limited forecasting depth.
+Built for Professional Use
+Designed for traders institutions and advanced users who require system level integration and decision support.
+Retail Oriented Design
+Primarily built for basic usage with limited flexibility for professional workflows.
+Integrated Risk First Approach
+Risk assessment is embedded into every insight including probability exposure and scenario awareness to support disciplined trading.
+Separate Risk Tools
+Risk checks are typically disconnected from signals leading to reactive rather than proactive decisions.
+THE MINTZY EDGE
+Everything you need to trade smarter.
+Nothing you don't.
+AI-Driven Market Intelligence
+Stop reacting. Start anticipating. Mintzy's adaptive AI processes market regimes in real time delivering directional signals with 86–96% accuracy.
+Personalized Strategies
+No two traders are the same. Mintzy tailors insights to your portfolio, risk appetite and trading style.
+Research-Backed Forecasting
+Every signal is grounded in quantitative research — trained, tested and validated against real market data.
+Integrated Risk & Compliance
+Institutional-grade risk management. Automated hedging and capital protection keep drawdowns in check automatically.
+Accessible at Any Scale
+Solo HNI or enterprise brokerage desk — Mintzy scales without performance loss. Access via API, Seed, or plug-in.
+Financial Consulting
+Advisory intelligence previously reserved for institutional desks — SEBI-compliant and available at every tier.
+Sub-1ms Execution
+Direct demat integration and sub-1ms latency minimize slippage so you capture alpha at source.
+Broker-Independent
+Zerodha. Dhan. Upstox. Angel One. Mintzy plugs into your broker via universal APIs — no lock-in.
+API SOLUTIONS
+Institutional Intelligence.
+Zero Code Required.
+For traders who want quantitative intelligence without building complex integrations, Mintzy brings institutional-grade analysis directly into your workflow.
+Real-time directional signals across equity, derivatives & crypto
+SEBI-compliant research-validated market forecasts
+Risk analytics and position-level alerts
+Regime-aware intelligence tuned to current conditions
+Start Free. Scale as You Grow.
+Every user gets 100 free API calls. Beyond that, usage is ₹3 per call — transparent with no hidden minimums.
+predict.py
+from Minting import Client
+client = Client(access_token="YOUR_ACCESS_TOKEN")
+result = client.get_prediction(
+tickers=["TCS"],
+time_frame="20 minutes",
+parameters=["close"],
+candle="5m"
+Predictions (20 minutes, candle=5m)
+TICKER
+DATE
+TIME
+PREDICTED PRICE
+TCS
+2026-04-13
+09:15:00
+2574.02
+09:20:00
+2576.49
+09:25:00
+2574.16
+09:30:00
+2582.90
+Use Mintzy's visual prediction workspace to query models and generate forecasts directly in your browser.
+Open Seed
+CUSTOM TRADE ENGINE
+The Engine Behind Every Edge.
+Built for speed. Designed for precision. Scaled for every trader. Mintzy's Custom Trade Engine is an adaptive intelligence system built from the ground up for Indian markets, executing with sub-1ms latency.
+Sub-1ms Latency
+Regime-Learning
+Regime-Adaptive Models
+Identifies trending, sideways or high-volatility regimes and adjusts directional signals accordingly to maintain 86–96% accuracy.
+Direct Demat Integration
+Signals connect directly to execution — reducing slippage between signal and trade so alpha is captured at source.
+Broker-Agnostic Architecture
+Built on universal API protocols connecting cleanly to Zerodha, Dhan, Upstox, Angel One and other major Indian brokers.
+Capital Protection Layer
+Automated swing hedging and drawdown controls are baked into the engine — not optional add-ons. Institutional risk logic for every user.
+Enterprise to HNI Scalability
+The same engine powering a single HNI account runs enterprise brokerage deployments with zero performance degradation at scale.
+SCRIPT SELECTION
+The Right Scripts. The Right Signals.
+Mintzy doesn't just give you signals — it helps you trade the scripts your strategy was built for.
+Mini — Foundation
+500+ Equity Scripts
+Ideal for large-cap and high-confidence setups.
+MOST POPULAR
+Alpha — Expanded
+2000+ Equity Scripts
+Broader market coverage with strong model validation.
+Beta — Multi-Asset
+Full Universal Access
+Access across equity, derivatives, and crypto markets.
+Need a Custom Selection?
+Work with our team to identify specific tickers aligned to your strategy.
+Contact Team
+Help us build a better Mintzy
+Your feedback directly shapes the future of our platform. Found a bug, have a feature request, or just want to share your thoughts? We're all ears.
+Share Feedback
+Frequently Asked Questions
+What is Mintzy?
+Mintzy is an AI-powered market intelligence platform giving traders and institutions access to personalized strategies and automated trading tools through one broker-independent ecosystem.
+Who is Mintzy for?
+Two audiences: young professionals (22–35) who want to plug-and-play financial insights and professional traders or brokerage firms that need robust API solutions built for their systems.
+Do I need to switch brokers?
+No. Mintzy is fully broker independent. It connects seamlessly with Zerodha, Dhan, Upstox, Angel One and more via universal APIs.
+How accurate is Mintzy's intelligence?
+Our adaptive AI models deliver 86–96% directional accuracy. The system uses continuous regime-learning that adapts to changing market conditions, so performance doesn't degrade over time.
+What markets does Mintzy cover?
+Equity, equity derivatives and crypto. Coverage scales from 500+ scripts at entry tier to full multi-asset coverage at the advanced tier.
+Is Mintzy SEBI-compliant?
+Yes. Every insight, alert and recommendation is SEBI-compliant. Regulatory alignment is a core design principle.
+What does API pricing look like?
+100 free API calls to start. Beyond that usage is priced at ₹3 per call transparent and scalable.
+What is the Plugin Framework?
+A subscription suite giving you access to equity scripts, automated swing trading, hedging and capital protection tools. Plans start at ₹3L/year.
+How does Mintzy make money if clients lose?
+It doesn't. Mintzy runs on a 10% profit share plus 10% loss coverage model. We win only when you win.
+Is there a free trial?
+Yes. API trials are available so you can test Mintzy's intelligence layer before committing to a plan.
+Customer Ratings
+Overall Mintzy Reviews
+4.7
+Overall Rating
+Insight Quality:
+Platform Experience:
+Customer Support:
+What Our Users Say
+“What stands out is the focus on transparency. Mintzy explains the reasoning behind the insights.”
+Arjun S.
+Retail Investor
+4.9/5
+“Mintzy's intelligence tools help narrow down opportunities much faster than manually scanning charts.”
+Rohit K.
+Active Trader
+4.8/5
+“Mintzy makes investing feel much more structured. Financial decision-making feels far less intimidating.”
+Priya M.
+Working Professional
+“Refreshing to see a platform that talks about protecting capital, not just returns.”
+Vivek A.
+Startup Founder
+“Clean UX, actionable insights — a good balance between professional analysis and accessibility.”
+Neha R.
+Long-Term Investor
+“Good platform overall — desktop works great, mobile experience could use polish.”
+Tarun L.
+IT Professional
+4/5
+“Solid insights — took a while to learn the interface, but support helped me onboard.”
+Meera S.
+First-time Investor
+3.5/5
+“I've been following Mintzy for the last few months, and what stands out is the focus on transparency. Most platforms simply generate recommendations, but Mintzy explains the reasoning behind the insights. The risk assessment reports helped me understand weaknesses in my portfolio that I had overlooked.”
+Retail Investor | Mumbai

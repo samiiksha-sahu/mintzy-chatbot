@@ -1,0 +1,44 @@
+How can we help?
+Find answers, explore platform capabilities, and get unstuck fast.
+Getting Started
+What is Mintzy and how does it work?
+How do I create an account?
+Which brokers does Mintzy support?
+How do I connect my brokerage account?
+What's the difference between the API, Plugin, and Seed?
+Account & Billing
+How do I upgrade my plan?
+Where can I view API usage?
+How is profit share calculated?
+What happens if I exceed my API limit?
+How do I cancel or pause my subscription?
+Plugin Framework
+What is the Plugin Framework?
+How does automated swing trading work?
+What is the capital protection feature?
+How do I select which scripts the plugin trades?
+How do I read my performance report?
+API & Developer
+How do I generate my API key?
+Where is the API documentation?
+What data formats does the API return?
+What are the rate limits?
+How do I integrate Mintzy signals into my platform?
+Market Intelligence
+How are directional signals generated?
+What does regime-learning AI mean in practice?
+How do I interpret a confidence score?
+Are all signals SEBI-compliant?
+Troubleshooting
+My broker connection shows an error
+I'm not receiving alerts
+My API calls aren't returning data
+How do I report a platform issue?
+Still need help?
+Reach out to our support team directly. We typically respond within 24 hours.
+Email Support
+For technical and account queries.
+support@mintzy.in
+Call Us
+Mon-Fri from 9am to 6pm IST.
++91 98765 43210

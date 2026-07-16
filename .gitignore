@@ -1,0 +1,24 @@
+# Dependency directories
+node_modules/
+mintzy-ai-chatbot/node_modules/
+
+# Python Virtual Environments
+venv/
+.venv/
+backend/venv/
+
+# Environment Variables & Secrets
+.env
+mintzy-ai-chatbot/.env
+*.env
+
+# Python caching
+__pycache__/
+*.pyc
+backend/__pycache__/
+mintzy-ai-chatbot/__pycache__/
+
+# Editor & OS files
+.vscode/
+.DS_Store
+Thumbs.db

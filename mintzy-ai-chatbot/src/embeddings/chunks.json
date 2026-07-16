@@ -1,0 +1,1034 @@
+[
+  {
+    "id": 1,
+    "source": "about.txt",
+    "chunk": 1,
+    "text": "Building the Future of AI-Powered Investing\nMintzy is an AI-powered financial intelligence platform that combines machine learning, quantitative research, and adaptive forecasting to help investors make smarter and more confident investment decisions. Equity scripts covered Innovation partners Years of AI research Intelligence products OUR MISSION"
+  },
+  {
+    "id": 2,
+    "source": "about.txt",
+    "chunk": 2,
+    "text": "Democratizing institutional-grade research\nAt Mintzy, our mission is to democratize institutional-grade investment research through artificial intelligence, making personalized, data-driven financial insights accessible to every investor."
+  },
+  {
+    "id": 3,
+    "source": "about.txt",
+    "chunk": 3,
+    "text": "OUR VISION\nMintzy aims to become the one-stop solution for intelligent investing across cross-asset markets, powered by personalized strategies, AI-driven insights, and data-driven intelligence that empower smarter financial decisions. Explore Mintzy SUPPORTED BY"
+  },
+  {
+    "id": 4,
+    "source": "about.txt",
+    "chunk": 4,
+    "text": "Backed by Leading Innovation Ecosystems\nMintzy is proud to be part of globally recognized startup and technology programs that accelerate innovation and help us build the future of AI-powered financial intelligence. DPIIT Startup India NVIDIA Inception Program AWS Startups Microsoft for Startups (Azure) Growth Avenue RESEARCH & INNOVATION"
+  },
+  {
+    "id": 5,
+    "source": "about.txt",
+    "chunk": 5,
+    "text": "Innovation at the heart of Mintzy\nWe continuously research and develop advanced AI models, quantitative strategies, and adaptive forecasting systems to deliver reliable, personalized, and data-driven investment intelligence across financial markets."
+  },
+  {
+    "id": 6,
+    "source": "about.txt",
+    "chunk": 6,
+    "text": "Advanced AI Models\nContinuous research into machine learning architectures tuned for financial time series and market signals."
+  },
+  {
+    "id": 7,
+    "source": "about.txt",
+    "chunk": 7,
+    "text": "Quantitative Strategies\nRigorous development of systematic strategies backed by data, backtesting, and risk-aware design."
+  },
+  {
+    "id": 8,
+    "source": "about.txt",
+    "chunk": 8,
+    "text": "Adaptive Forecasting\nForecasting systems that adapt to changing regimes, volatility, and cross-asset market dynamics."
+  },
+  {
+    "id": 9,
+    "source": "about.txt",
+    "chunk": 9,
+    "text": "Personalized Intelligence\nInvestment insights tailored to individual goals, risk profiles, and portfolio context. FROM THE FOUNDERS"
+  },
+  {
+    "id": 10,
+    "source": "about.txt",
+    "chunk": 10,
+    "text": "Why we built Mintzy\nWe started Mintzy because we saw a gap between the sophistication of institutional investment research and what everyday investors could actually access. Markets move fast, data is abundant, but turning that data into confident decisions still felt out of reach for most people. Our goal is simple: bring the rigor of quantitative research and adaptive AI forecasting to every investor — without the complexity. Every product we ship, from our plugin terminal to Seed and API, is built with that mission in mind. Thank you for being part of this journey. We're just getting started. OUR TEAM"
+  },
+  {
+    "id": 11,
+    "source": "about.txt",
+    "chunk": 11,
+    "text": "Meet The People Behind The Platform\nOur team blends AI research, quantitative finance, and product engineering to build smarter tools for more confident investing. Tanmay Chaturvedi Co-founder & CEO Om Kulthe Co-founder & CTO"
+  },
+  {
+    "id": 12,
+    "source": "apiDocs.txt",
+    "chunk": 1,
+    "text": "API Section\nMintzy is a financial information technology company delivering data-driven market forecasting and financial consulting across global financial markets. Our API-driven framework enables scenario-based forecasting for equities, derivatives, and crypto assets. This guide helps you set up the Mintzy SDK and make your first API request within minutes. The SDK is designed for developers, quantitative researchers, and system integrators who require programmatic access to market forecasting and analytical services."
+  },
+  {
+    "id": 13,
+    "source": "apiDocs.txt",
+    "chunk": 2,
+    "text": "Get Your Access Token\nAll Mintzy API requests require authentication via an access token. To generate your token: Navigate to the API or account settings section"
+  },
+  {
+    "id": 14,
+    "source": "apiDocs.txt",
+    "chunk": 3,
+    "text": "Generate a new access token\nImportant: Store your access token securely. Requests made with invalid or expired tokens will return authentication errors."
+  },
+  {
+    "id": 15,
+    "source": "apiDocs.txt",
+    "chunk": 4,
+    "text": "Access Token Authentication\nMintzy uses token-based authentication to validate API requests. Each client instance must be initialized with a valid access token before making any API calls. Initialization Example PYTHON from Minting import Client client = Client(access_token=\"<TOKEN_GENERATED>\") Python Requirements The Mintzy SDK requires Python 3.7 or higher. Download Python from the official website and follow the installation instructions for your operating system: https://www.python.org/downloads Verify Python Installation Confirm that Python is installed correctly: BASH python --version"
+  },
+  {
+    "id": 16,
+    "source": "apiDocs.txt",
+    "chunk": 5,
+    "text": "Install the Mintzy SDK\nInstall the Mintzy SDK using pip. All required dependencies are installed automatically, including requests, pymongo, pandas, and flask. pip install Minting Verify SDK Installation Verify that the SDK is installed and accessible: python -c \"import Minting; print(Minting.__version__)\""
+  },
+  {
+    "id": 17,
+    "source": "apiDocs.txt",
+    "chunk": 6,
+    "text": "Make Your First Prediction\nUse the Mintzy client to fetch scenario-based market predictions. Initialize the client with your access token and call the prediction method to retrieve forecasted data. example.py # Initialize Client client = Client(access_token=\"YOUR_ACCESS_TOKEN\") # Make Prediction prediction = client.get_prediction( tickers=[\"RELIANCE\"], timeframe=\"4 hours\", parameters=[\"close\"] print(prediction) METHOD"
+  },
+  {
+    "id": 18,
+    "source": "apiDocs.txt",
+    "chunk": 7,
+    "text": "client.get_prediction\nRetrieves market predictions for one or more tickers and returns the results in a structured table. Response Format The response is formatted with the following columns: Ticker Date Time Predicted Price Parameters Parameters\tType\tDescription tickers\tlist\tList of stock tickers timeframe\tstring\tPrediction horizon (e.g., \"4 hours\")"
+  },
+  {
+    "id": 19,
+    "source": "apiDocs.txt",
+    "chunk": 8,
+    "text": "parameters\tlist\tPrediction fields such as \"close\"\nA non-exhaustive list of supported assets available for forecasting. ABB ACC ADANIENT ADANIGREEN ADANIPORTS ADANIPOWER ALKEM AMBUJACEM APOLLOHOSP ASIANPAINT ASTRAL AUROPHARMA AXISBANK BAJAJFINSV BAJAJHLDNG BAJFINANCE BANDHANBNK BANKBARODA BERGEPAINT BHARTIARTL BOSCHLTD BRITANNIA CHOLAFIN CIPLA COALINDIA COLPAL CONCOR DABUR DIVISLAB DLF DRREDDY EICHERMOT FEDERALBNK GAIL GODREJCP GRASIM HAVELLS HCLTECH HDFCAMC HDFCBANK HDFCLIFE HEROMOTOCO HINDALCO HINDUNILVR HINDZINC ICICIBANK ICICIGI ICICIPRULI INDIGO INDUSTOWER INFY ITC JINDALSTEL JSWENERGY JSWSTEEL KOTAKBANK LICI LTIM LUPIN MARICO MARUTI MOTHERSON MRF MUTHOOTFIN NESTLEIND NMDC NTPC OIL ONGC PAGEIND PIDILITIND PIIND PNB POWERGRID RECLTD SBILIFE SBIN SHREECEM SIEMENS SRF SUNPHARMA TATACHEM TATACONSUM TATAELXSI TATAPOWER TATASTEEL TCS TORNTPHARM TORNTPOWER TRENT TVSMOTOR UBL ULTRACEMCO VEDL WIPRO Fetching Single Ticker Predictions 5 minutes Beginner Handling Multiple Tickers 10 minutes Intermediate Troubleshooting Common Errors 15 minutes Advanced"
+  },
+  {
+    "id": 20,
+    "source": "apiDocs.txt",
+    "chunk": 9,
+    "text": "Troubleshooting Summary\nFor a complete list of error codes and detailed fixes, please see the Troubleshooting Tutorial above. Invalid Access Token Unsupported Tickers No Data Available"
+  },
+  {
+    "id": 21,
+    "source": "apiDocs.txt",
+    "chunk": 10,
+    "text": "Installation Errors\nAI-powered financial intelligence and adaptive forecasting for modern investors, developers, and institutions. PRODUCTS RESOURCES Engineering Blog Help Center Community COMPANY Careers LEGAL"
+  },
+  {
+    "id": 22,
+    "source": "apiDocs.txt",
+    "chunk": 11,
+    "text": "Security\n© 2026 Mintzy All rights reserved. GitHub Decline"
+  },
+  {
+    "id": 23,
+    "source": "backtest.txt",
+    "chunk": 1,
+    "text": "Validate strategies before going live\nRun historical NSE simulations with stop-loss rules, capital allocation, and live portfolio analytics — all in one workflow. Open Backtester CAPABILITIES"
+  },
+  {
+    "id": 24,
+    "source": "backtest.txt",
+    "chunk": 2,
+    "text": "Everything you need to validate a strategy\nConfigure tickers, risk rules, and date ranges — then review portfolio-level analytics before taking anything live."
+  },
+  {
+    "id": 25,
+    "source": "backtest.txt",
+    "chunk": 3,
+    "text": "Historical Simulation\nReplay Mintzy logic on NSE historical data across custom date ranges and candle intervals."
+  },
+  {
+    "id": 26,
+    "source": "backtest.txt",
+    "chunk": 4,
+    "text": "Per-Ticker Controls\nSet capital, stop loss, and trade sizing independently for every stock in your basket."
+  },
+  {
+    "id": 27,
+    "source": "backtest.txt",
+    "chunk": 5,
+    "text": "Live Result Streaming\nPortfolio equity, P&L charts, and per-ticker stats update as each simulation completes."
+  },
+  {
+    "id": 28,
+    "source": "blog.txt",
+    "chunk": 1,
+    "text": "The Mechanics of Consistency: Inside a Production-Grade Trade Engine\nOver 91 live sessions across 46 scripts, we stress-tested the Alpha Selection Engine for operational discipline—not explosive days, but repeatable process under real market conditions. Content and media team | Mintzy 11 min read PRODUCT ENGINEERING JUN 9, 2026 10 MIN READ"
+  },
+  {
+    "id": 29,
+    "source": "blog.txt",
+    "chunk": 2,
+    "text": "Building an AI Trading Operator with Claude and Mintzy\nWhen AI stops being a research assistant and becomes an operator—Mintzy supplies the intelligence layer while Claude runs the systematic execution workflow. Read RISK MANAGEMENT APR 19, 2026 12 MIN READ"
+  },
+  {
+    "id": 30,
+    "source": "blog.txt",
+    "chunk": 3,
+    "text": "Predicting Non-Performing Loans: How Machine Learning Safeguards Banks\nCommercial banks face immense risks from bad debt. Discover how advanced models, specifically Random Forest, are being used to predict loan defaults with up to 89.11% accuracy to improve overall risk management. Tanmay Chaturvedi PRODUCT INSIGHT APR 22, 2026 8 MIN READ"
+  },
+  {
+    "id": 31,
+    "source": "blog.txt",
+    "chunk": 4,
+    "text": "When Fortune Awaits a Click\nMintzy Seed transforms raw market data into clear trading signals. No complex configuration, no hidden logic — just practical insights traders can actually act on. Om Kulthe DATA SCIENCE APR 15, 2026 14 MIN READ"
+  },
+  {
+    "id": 32,
+    "source": "blog.txt",
+    "chunk": 5,
+    "text": "Comparative Analysis of ML Algorithms on Imbalanced Financial Datasets\nTackling the challenge of imbalanced datasets using SMOTE. We compare Random Forest, XGBoost, LSTM, and more using metrics like AUC-PR to find the best model for predicting financial risk. Sukanta Halder MINTZY BLOG"
+  },
+  {
+    "id": 33,
+    "source": "blog.txt",
+    "chunk": 6,
+    "text": "Research, product notes & market intelligence\nDeep dives into AI forecasting, systematic trading infrastructure, and the engineering behind Mintzy's financial intelligence platform."
+  },
+  {
+    "id": 34,
+    "source": "careers.txt",
+    "chunk": 1,
+    "text": "Build the Intelligence Layer for Financial Markets\nMintzy is building forecasting, automation, and quantitative intelligence infrastructure for the next generation of financial markets. If you're excited by difficult problems, real ownership, and meaningful impact, we'd love to hear from you."
+  },
+  {
+    "id": 35,
+    "source": "careers.txt",
+    "chunk": 2,
+    "text": "WHAT WE BUILD\nForecasting systems, intelligence APIs, automation infrastructure, and quantitative tooling for modern markets."
+  },
+  {
+    "id": 36,
+    "source": "careers.txt",
+    "chunk": 3,
+    "text": "HOW WE WORK\nSmall teams, fast iteration, direct ownership, and a bias toward building instead of discussing."
+  },
+  {
+    "id": 37,
+    "source": "careers.txt",
+    "chunk": 4,
+    "text": "WHY IT MATTERS\nWe want advanced market intelligence to be usable by every participant, not only large funds and desks."
+  },
+  {
+    "id": 38,
+    "source": "careers.txt",
+    "chunk": 5,
+    "text": "WHO WE ARE\nAI-native infrastructure for smarter market participation. Mintzy is an AI native financial technology company building forecasting, automation, and quantitative intelligence infrastructure for modern financial markets. We believe institutional-grade market intelligence should not be limited to large funds and trading desks. Our mission is to make advanced forecasting and decision-making systems accessible to every market participant. Today, we're building the technology that powers smarter participation in financial markets from intelligence APIs and automated trading infrastructure to next-generation forecasting systems. Recognized at TiE University's Global Pitch Competition and supported through strategic technology partnerships, we're assembling a team of builders, researchers, and engineers to shape the future of market intelligence."
+  },
+  {
+    "id": 39,
+    "source": "careers.txt",
+    "chunk": 6,
+    "text": "WHAT WE VALUE\nThe principles behind the work."
+  },
+  {
+    "id": 40,
+    "source": "careers.txt",
+    "chunk": 7,
+    "text": "Curiosity Over Credentials\nGreat ideas can come from anywhere. We value people who ask better questions, learn quickly, and constantly push beyond what they already know."
+  },
+  {
+    "id": 41,
+    "source": "careers.txt",
+    "chunk": 8,
+    "text": "Ownership Over Titles\nAt Mintzy, responsibility matters more than hierarchy. We trust people to take initiative, solve problems, and drive outcomes."
+  },
+  {
+    "id": 42,
+    "source": "careers.txt",
+    "chunk": 9,
+    "text": "Execution Over Meetings\nIdeas are valuable only when they become reality. We move quickly, iterate continuously, and focus on building things that create measurable impact."
+  },
+  {
+    "id": 43,
+    "source": "careers.txt",
+    "chunk": 10,
+    "text": "OPEN ROLES\nJoin us in building the operating layer for intelligent markets. We are hiring across engineering and research functions that sit close to core product, core infrastructure, and core intelligence systems. TEAM OPENING"
+  },
+  {
+    "id": 44,
+    "source": "careers.txt",
+    "chunk": 11,
+    "text": "Backend & API Engineering\nBuild the infrastructure powering forecasting systems, broker integrations, and real time market intelligence. You'll design scalable services, APIs, and backend systems that support the next generation of financial technology."
+  },
+  {
+    "id": 45,
+    "source": "careers.txt",
+    "chunk": 12,
+    "text": "Frontend & Product Engineering\nCreate products that transform complex financial intelligence into intuitive user experiences. You'll help shape how traders, developers, and institutions interact with Mintzy."
+  },
+  {
+    "id": 46,
+    "source": "careers.txt",
+    "chunk": 13,
+    "text": "AI & Quantitative Research\nResearch market behavior, forecasting models, and decision systems that power our intelligence layer. You'll work at the intersection of machine learning, finance, and quantitative analysis."
+  },
+  {
+    "id": 47,
+    "source": "careers.txt",
+    "chunk": 14,
+    "text": "Infrastructure & Platform Engineering\nBuild reliable, secure, and scalable systems that support forecasting pipelines, automation frameworks, and production-grade financial infrastructure."
+  },
+  {
+    "id": 48,
+    "source": "careers.txt",
+    "chunk": 15,
+    "text": "WHY JOIN EARLY?\nEarly builders shape the company, not just the roadmap. If you want to work on foundational systems, learn quickly, and see your decisions directly affect the product, this is the stage where that happens. Small Team. Large Impact. Early team members influence product direction, architecture decisions, research priorities, and company culture. Your work directly shapes the future of the company."
+  },
+  {
+    "id": 49,
+    "source": "careers.txt",
+    "chunk": 16,
+    "text": "Real Ownership\nWe value people who take initiative and think like builders. You'll have the freedom to contribute beyond your job description and the responsibility to help turn ideas into reality."
+  },
+  {
+    "id": 50,
+    "source": "careers.txt",
+    "chunk": 17,
+    "text": "Work On Difficult Problems\nFrom forecasting systems and AI infrastructure to automation and quantitative research, you'll be working on problems that genuinely matter."
+  },
+  {
+    "id": 51,
+    "source": "careers.txt",
+    "chunk": 18,
+    "text": "Learn Faster\nStartups compress years of learning into months. You'll collaborate closely with engineers, researchers, and operators while building products used by real users in real markets."
+  },
+  {
+    "id": 52,
+    "source": "careers.txt",
+    "chunk": 19,
+    "text": "READY TO BUILD?\nIf you're excited by market intelligence, we'd love to hear from you. Whether your background is in AI systems, quantitative research, infrastructure, or product engineering, reach out if you want to help build forecasting and automation systems from the ground up. CONTACT"
+  },
+  {
+    "id": 53,
+    "source": "careers.txt",
+    "chunk": 20,
+    "text": "careers@mintzy.ai\nSend a short note about yourself, the role you're interested in, and the kind of systems you want to build."
+  },
+  {
+    "id": 54,
+    "source": "help.txt",
+    "chunk": 1,
+    "text": "How can we help?\nFind answers, explore platform capabilities, and get unstuck fast."
+  },
+  {
+    "id": 55,
+    "source": "help.txt",
+    "chunk": 2,
+    "text": "How do I connect my brokerage account?\nWhat's the difference between the API, Plugin, and Seed?"
+  },
+  {
+    "id": 56,
+    "source": "help.txt",
+    "chunk": 3,
+    "text": "What happens if I exceed my API limit?\nHow do I cancel or pause my subscription?"
+  },
+  {
+    "id": 57,
+    "source": "help.txt",
+    "chunk": 4,
+    "text": "How do I select which scripts the plugin trades?\nHow do I read my performance report?"
+  },
+  {
+    "id": 58,
+    "source": "help.txt",
+    "chunk": 5,
+    "text": "What are the rate limits?\nHow do I integrate Mintzy signals into my platform?"
+  },
+  {
+    "id": 59,
+    "source": "help.txt",
+    "chunk": 6,
+    "text": "What does regime-learning AI mean in practice?\nHow do I interpret a confidence score? Are all signals SEBI-compliant? Troubleshooting My broker connection shows an error I'm not receiving alerts"
+  },
+  {
+    "id": 60,
+    "source": "help.txt",
+    "chunk": 7,
+    "text": "My API calls aren't returning data\nHow do I report a platform issue?"
+  },
+  {
+    "id": 61,
+    "source": "help.txt",
+    "chunk": 8,
+    "text": "Still need help?\nReach out to our support team directly. We typically respond within 24 hours."
+  },
+  {
+    "id": 62,
+    "source": "help.txt",
+    "chunk": 9,
+    "text": "Email Support\nFor technical and account queries. support@mintzy.in"
+  },
+  {
+    "id": 63,
+    "source": "help.txt",
+    "chunk": 10,
+    "text": "Call Us\nMon-Fri from 9am to 6pm IST. +91 98765 43210"
+  },
+  {
+    "id": 64,
+    "source": "home.txt",
+    "chunk": 1,
+    "text": "for every Investor & Trader\nMintzy provides smart financial tools designed for clarity and transparency. Access real-time insights from global markets through APIs, Broker Independent Seed, and Custom Plugins. Demo with Founder Why Mintzy? Custom Investment Strategies Every investment strategy is built to match your unique financial goals and risk profile"
+  },
+  {
+    "id": 65,
+    "source": "home.txt",
+    "chunk": 2,
+    "text": "Personalized Market Forecasting\nMintzy generates tailored market forecasts using adaptive data driven mathematical models."
+  },
+  {
+    "id": 66,
+    "source": "home.txt",
+    "chunk": 3,
+    "text": "Autonomous Adaptive Intelligence\nOur Adaptive Data Pipeline encompasses current market volatility and liquidity in determining market trajectories."
+  },
+  {
+    "id": 67,
+    "source": "home.txt",
+    "chunk": 4,
+    "text": "Integrated Risk Management\nOur custom extension solutions provide risk profile driven market research thereby ensuring ideal financial planning."
+  },
+  {
+    "id": 68,
+    "source": "home.txt",
+    "chunk": 5,
+    "text": "Solutions for Institutions\nMintzy offers custom Plug & Play frameworks for providing automated swing trading & hedging services."
+  },
+  {
+    "id": 69,
+    "source": "home.txt",
+    "chunk": 6,
+    "text": "Solutions for Individuals\nOur API setup delivers real-time market forecasts and actionable insights for traders globally. How Mintzy is different? Other Platforms"
+  },
+  {
+    "id": 70,
+    "source": "home.txt",
+    "chunk": 7,
+    "text": "Independent Intelligence Platform\nMintzy operates as an independent research and analysis platform. It does not earn through brokerage influence or execution incentives which keeps insights objective."
+  },
+  {
+    "id": 71,
+    "source": "home.txt",
+    "chunk": 8,
+    "text": "Broker Led Platforms\nMost platforms are tied to execution or distribution which can bias insights toward activity rather than decision quality."
+  },
+  {
+    "id": 72,
+    "source": "home.txt",
+    "chunk": 9,
+    "text": "Deep Market Analysis\nMintzy analyzes market data using research backed AI models with adaptive forecasting and contextual insights rather than surface level indicators."
+  },
+  {
+    "id": 73,
+    "source": "home.txt",
+    "chunk": 10,
+    "text": "Shallow Analytics\nInsights are often rule based indicator driven or generic with limited forecasting depth."
+  },
+  {
+    "id": 74,
+    "source": "home.txt",
+    "chunk": 11,
+    "text": "Built for Professional Use\nDesigned for traders institutions and advanced users who require system level integration and decision support."
+  },
+  {
+    "id": 75,
+    "source": "home.txt",
+    "chunk": 12,
+    "text": "Retail Oriented Design\nPrimarily built for basic usage with limited flexibility for professional workflows."
+  },
+  {
+    "id": 76,
+    "source": "home.txt",
+    "chunk": 13,
+    "text": "Integrated Risk First Approach\nRisk assessment is embedded into every insight including probability exposure and scenario awareness to support disciplined trading."
+  },
+  {
+    "id": 77,
+    "source": "home.txt",
+    "chunk": 14,
+    "text": "Separate Risk Tools\nRisk checks are typically disconnected from signals leading to reactive rather than proactive decisions."
+  },
+  {
+    "id": 78,
+    "source": "home.txt",
+    "chunk": 15,
+    "text": "THE MINTZY EDGE\nEverything you need to trade smarter. Nothing you don't."
+  },
+  {
+    "id": 79,
+    "source": "home.txt",
+    "chunk": 16,
+    "text": "AI-Driven Market Intelligence\nStop reacting. Start anticipating. Mintzy's adaptive AI processes market regimes in real time delivering directional signals with 86–96% accuracy."
+  },
+  {
+    "id": 80,
+    "source": "home.txt",
+    "chunk": 17,
+    "text": "Personalized Strategies\nNo two traders are the same. Mintzy tailors insights to your portfolio, risk appetite and trading style."
+  },
+  {
+    "id": 81,
+    "source": "home.txt",
+    "chunk": 18,
+    "text": "Research-Backed Forecasting\nEvery signal is grounded in quantitative research — trained, tested and validated against real market data."
+  },
+  {
+    "id": 82,
+    "source": "home.txt",
+    "chunk": 19,
+    "text": "Integrated Risk & Compliance\nInstitutional-grade risk management. Automated hedging and capital protection keep drawdowns in check automatically."
+  },
+  {
+    "id": 83,
+    "source": "home.txt",
+    "chunk": 20,
+    "text": "Accessible at Any Scale\nSolo HNI or enterprise brokerage desk — Mintzy scales without performance loss. Access via API, Seed, or plug-in."
+  },
+  {
+    "id": 84,
+    "source": "home.txt",
+    "chunk": 21,
+    "text": "Financial Consulting\nAdvisory intelligence previously reserved for institutional desks — SEBI-compliant and available at every tier."
+  },
+  {
+    "id": 85,
+    "source": "home.txt",
+    "chunk": 22,
+    "text": "Sub-1ms Execution\nDirect demat integration and sub-1ms latency minimize slippage so you capture alpha at source."
+  },
+  {
+    "id": 86,
+    "source": "home.txt",
+    "chunk": 23,
+    "text": "Broker-Independent\nZerodha. Dhan. Upstox. Angel One. Mintzy plugs into your broker via universal APIs — no lock-in. API SOLUTIONS Institutional Intelligence. Zero Code Required. For traders who want quantitative intelligence without building complex integrations, Mintzy brings institutional-grade analysis directly into your workflow. Real-time directional signals across equity, derivatives & crypto SEBI-compliant research-validated market forecasts Risk analytics and position-level alerts"
+  },
+  {
+    "id": 87,
+    "source": "home.txt",
+    "chunk": 24,
+    "text": "Regime-aware intelligence tuned to current conditions\nStart Free. Scale as You Grow. Every user gets 100 free API calls. Beyond that, usage is ₹3 per call — transparent with no hidden minimums. predict.py from Minting import Client client = Client(access_token=\"YOUR_ACCESS_TOKEN\") result = client.get_prediction( tickers=[\"TCS\"], time_frame=\"20 minutes\", parameters=[\"close\"], candle=\"5m\" Predictions (20 minutes, candle=5m) TICKER DATE TIME PREDICTED PRICE TCS 2026-04-13 09:15:00 2574.02 09:20:00 2576.49 09:25:00 2574.16 09:30:00"
+  },
+  {
+    "id": 88,
+    "source": "home.txt",
+    "chunk": 25,
+    "text": "2582.90\nUse Mintzy's visual prediction workspace to query models and generate forecasts directly in your browser. Open Seed"
+  },
+  {
+    "id": 89,
+    "source": "home.txt",
+    "chunk": 26,
+    "text": "CUSTOM TRADE ENGINE\nThe Engine Behind Every Edge. Built for speed. Designed for precision. Scaled for every trader. Mintzy's Custom Trade Engine is an adaptive intelligence system built from the ground up for Indian markets, executing with sub-1ms latency. Sub-1ms Latency Regime-Learning"
+  },
+  {
+    "id": 90,
+    "source": "home.txt",
+    "chunk": 27,
+    "text": "Regime-Adaptive Models\nIdentifies trending, sideways or high-volatility regimes and adjusts directional signals accordingly to maintain 86–96% accuracy."
+  },
+  {
+    "id": 91,
+    "source": "home.txt",
+    "chunk": 28,
+    "text": "Direct Demat Integration\nSignals connect directly to execution — reducing slippage between signal and trade so alpha is captured at source."
+  },
+  {
+    "id": 92,
+    "source": "home.txt",
+    "chunk": 29,
+    "text": "Broker-Agnostic Architecture\nBuilt on universal API protocols connecting cleanly to Zerodha, Dhan, Upstox, Angel One and other major Indian brokers."
+  },
+  {
+    "id": 93,
+    "source": "home.txt",
+    "chunk": 30,
+    "text": "Capital Protection Layer\nAutomated swing hedging and drawdown controls are baked into the engine — not optional add-ons. Institutional risk logic for every user."
+  },
+  {
+    "id": 94,
+    "source": "home.txt",
+    "chunk": 31,
+    "text": "Enterprise to HNI Scalability\nThe same engine powering a single HNI account runs enterprise brokerage deployments with zero performance degradation at scale."
+  },
+  {
+    "id": 95,
+    "source": "home.txt",
+    "chunk": 32,
+    "text": "SCRIPT SELECTION\nThe Right Scripts. The Right Signals. Mintzy doesn't just give you signals — it helps you trade the scripts your strategy was built for. Mini — Foundation"
+  },
+  {
+    "id": 96,
+    "source": "home.txt",
+    "chunk": 33,
+    "text": "500+ Equity Scripts\nIdeal for large-cap and high-confidence setups. MOST POPULAR Alpha — Expanded"
+  },
+  {
+    "id": 97,
+    "source": "home.txt",
+    "chunk": 34,
+    "text": "2000+ Equity Scripts\nBroader market coverage with strong model validation. Beta — Multi-Asset"
+  },
+  {
+    "id": 98,
+    "source": "home.txt",
+    "chunk": 35,
+    "text": "Full Universal Access\nAccess across equity, derivatives, and crypto markets."
+  },
+  {
+    "id": 99,
+    "source": "home.txt",
+    "chunk": 36,
+    "text": "Need a Custom Selection?\nWork with our team to identify specific tickers aligned to your strategy. Contact Team"
+  },
+  {
+    "id": 100,
+    "source": "home.txt",
+    "chunk": 37,
+    "text": "Help us build a better Mintzy\nYour feedback directly shapes the future of our platform. Found a bug, have a feature request, or just want to share your thoughts? We're all ears. Share Feedback Frequently Asked Questions"
+  },
+  {
+    "id": 101,
+    "source": "home.txt",
+    "chunk": 38,
+    "text": "What is Mintzy?\nMintzy is an AI-powered market intelligence platform giving traders and institutions access to personalized strategies and automated trading tools through one broker-independent ecosystem."
+  },
+  {
+    "id": 102,
+    "source": "home.txt",
+    "chunk": 39,
+    "text": "Who is Mintzy for?\nTwo audiences: young professionals (22–35) who want to plug-and-play financial insights and professional traders or brokerage firms that need robust API solutions built for their systems."
+  },
+  {
+    "id": 103,
+    "source": "home.txt",
+    "chunk": 40,
+    "text": "Do I need to switch brokers?\nNo. Mintzy is fully broker independent. It connects seamlessly with Zerodha, Dhan, Upstox, Angel One and more via universal APIs."
+  },
+  {
+    "id": 104,
+    "source": "home.txt",
+    "chunk": 41,
+    "text": "How accurate is Mintzy's intelligence?\nOur adaptive AI models deliver 86–96% directional accuracy. The system uses continuous regime-learning that adapts to changing market conditions, so performance doesn't degrade over time."
+  },
+  {
+    "id": 105,
+    "source": "home.txt",
+    "chunk": 42,
+    "text": "What markets does Mintzy cover?\nEquity, equity derivatives and crypto. Coverage scales from 500+ scripts at entry tier to full multi-asset coverage at the advanced tier."
+  },
+  {
+    "id": 106,
+    "source": "home.txt",
+    "chunk": 43,
+    "text": "Is Mintzy SEBI-compliant?\nYes. Every insight, alert and recommendation is SEBI-compliant. Regulatory alignment is a core design principle."
+  },
+  {
+    "id": 107,
+    "source": "home.txt",
+    "chunk": 44,
+    "text": "What does API pricing look like?\n100 free API calls to start. Beyond that usage is priced at ₹3 per call transparent and scalable."
+  },
+  {
+    "id": 108,
+    "source": "home.txt",
+    "chunk": 45,
+    "text": "What is the Plugin Framework?\nA subscription suite giving you access to equity scripts, automated swing trading, hedging and capital protection tools. Plans start at ₹3L/year."
+  },
+  {
+    "id": 109,
+    "source": "home.txt",
+    "chunk": 46,
+    "text": "How does Mintzy make money if clients lose?\nIt doesn't. Mintzy runs on a 10% profit share plus 10% loss coverage model. We win only when you win."
+  },
+  {
+    "id": 110,
+    "source": "home.txt",
+    "chunk": 47,
+    "text": "Is there a free trial?\nYes. API trials are available so you can test Mintzy's intelligence layer before committing to a plan. Customer Ratings Overall Mintzy Reviews 4.7 Overall Rating Insight Quality: Platform Experience: Customer Support: What Our Users Say “What stands out is the focus on transparency. Mintzy explains the reasoning behind the insights.” Arjun S. Retail Investor 4.9/5 “Mintzy's intelligence tools help narrow down opportunities much faster than manually scanning charts.” Rohit K. Active Trader 4.8/5 “Mintzy makes investing feel much more structured. Financial decision-making feels far less intimidating.” Priya M. Working Professional “Refreshing to see a platform that talks about protecting capital, not just returns.” Vivek A. Startup Founder “Clean UX, actionable insights — a good balance between professional analysis and accessibility.” Neha R. Long-Term Investor “Good platform overall — desktop works great, mobile experience could use polish.” Tarun L. IT Professional 4/5 “Solid insights — took a while to learn the interface, but support helped me onboard.” Meera S. First-time Investor 3.5/5 “I've been following Mintzy for the last few months, and what stands out is the focus on transparency. Most platforms simply generate recommendations, but Mintzy explains the reasoning behind the insights. The risk assessment reports helped me understand weaknesses in my portfolio that I had overlooked.” Retail Investor | Mumbai"
+  },
+  {
+    "id": 111,
+    "source": "plugin.txt",
+    "chunk": 1,
+    "text": "An End to End Automated Trading System\nMintzy Plugin is an end-to-end automated trading system that unifies market data, decision-making, execution, and risk control, using a data-driven machine learning pipeline. Launch Terminal Why Mintzy? What you Get"
+  },
+  {
+    "id": 112,
+    "source": "plugin.txt",
+    "chunk": 2,
+    "text": "End to End Execution\nHandles the full trade lifecycle from signal generation to execution and hedge management."
+  },
+  {
+    "id": 113,
+    "source": "plugin.txt",
+    "chunk": 3,
+    "text": "Dynamic Strategy Selection\nStrategies are not fixed. They are selected and adapted through the internal ML pipeline based on scenario context."
+  },
+  {
+    "id": 114,
+    "source": "plugin.txt",
+    "chunk": 4,
+    "text": "Automated Swing Trade Execution\nExecutes swing trade workflows without manual intervention."
+  },
+  {
+    "id": 115,
+    "source": "plugin.txt",
+    "chunk": 5,
+    "text": "Integrated Hedge Handling\nSupports hedge creation adjustment and closure as part of the execution flow."
+  },
+  {
+    "id": 116,
+    "source": "plugin.txt",
+    "chunk": 6,
+    "text": "High Speed Order Execution\nCapable of firing multiple orders within a single second in a coordinated manner. How Mintzy Plugin is different? Traditional Advisory"
+  },
+  {
+    "id": 117,
+    "source": "plugin.txt",
+    "chunk": 7,
+    "text": "Investor Specific Personalization\nMintzy operates as an independent research and analysis platform. It does not earn through brokerage influence or execution incentives which keeps insights objective."
+  },
+  {
+    "id": 118,
+    "source": "plugin.txt",
+    "chunk": 8,
+    "text": "Limited Personalization\nMost platforms are tied to execution or distribution which can bias insights toward activity rather than decision quality."
+  },
+  {
+    "id": 119,
+    "source": "plugin.txt",
+    "chunk": 9,
+    "text": "Live Market Awareness\nMintzy analyzes market data using research backed AI models with adaptive forecasting and contextual insights rather than surface level indicators."
+  },
+  {
+    "id": 120,
+    "source": "plugin.txt",
+    "chunk": 10,
+    "text": "Periodic Market Awareness\nInsights are often rule based indicator driven or generic with limited forecasting depth."
+  },
+  {
+    "id": 121,
+    "source": "plugin.txt",
+    "chunk": 11,
+    "text": "Proprietary Search Capability\nDesigned for traders institutions and advanced users who require system level integration and decision support."
+  },
+  {
+    "id": 122,
+    "source": "plugin.txt",
+    "chunk": 12,
+    "text": "Limited Search Capability\nPrimarily built for basic usage with limited flexibility for professional workflows."
+  },
+  {
+    "id": 123,
+    "source": "plugin.txt",
+    "chunk": 13,
+    "text": "Tuned Hallucination Control\nRisk assessment is embedded into every insight including probability exposure and scenario awareness to support disciplined trading."
+  },
+  {
+    "id": 124,
+    "source": "plugin.txt",
+    "chunk": 14,
+    "text": "Medium Hallucination Control\nRisk checks are typically disconnected from signals leading to reactive rather than proactive decisions. PLUGIN FRAMEWORK PRICING Transparent, performance-aligned pricing. Mintzy wins when you win. 𝓂ᵢₙᵢ"
+  },
+  {
+    "id": 125,
+    "source": "plugin.txt",
+    "chunk": 15,
+    "text": "MINI\nFor traders starting with AI-assisted equity trading. ₹3,00,000 / year + 10% PROFIT SHARE WHAT'S INCLUDED 500+ equity scripts Up to 10,000 trades/year Automated swing trading & hedging Capital protection framework Sub-1ms execution via direct demat Works across Zerodha, Dhan, Upstox, Angel One Standard support Select Plan"
+  },
+  {
+    "id": 126,
+    "source": "plugin.txt",
+    "chunk": 16,
+    "text": "ALPHA\nFor active traders who want broader market coverage. ₹5,00,000 2000+ equity scripts Everything in Mini Mid-cap and extended script universe Priority support Continue with Plan"
+  },
+  {
+    "id": 127,
+    "source": "plugin.txt",
+    "chunk": 17,
+    "text": "BETA\nFor sophisticated traders and institutions. ₹10,00,000 Multi-asset: Equity, Derivatives & Crypto Everything in Alpha Cross-asset signal correlation Dedicated account support"
+  },
+  {
+    "id": 128,
+    "source": "plugin.txt",
+    "chunk": 18,
+    "text": "Extension Layer — Enterprise\nFor institutions, trading desks and HNI clients with specific requirements. Bespoke script selection Custom API integration Strategy alignment Dedicated team support Custom Pricing Book a Demo"
+  },
+  {
+    "id": 129,
+    "source": "plugin.txt",
+    "chunk": 19,
+    "text": "The Mintzy Guarantee\nWe take 10% of profits only. We also cover 10% of losses. We don't make money unless you do."
+  },
+  {
+    "id": 130,
+    "source": "plugin.txt",
+    "chunk": 20,
+    "text": "What is the Plugin Framework?\nMintzy's core subscription product. It gives traders automated access to AI-driven swing trading signals, hedging execution and capital protection tools through a plug-in connected to your existing broker."
+  },
+  {
+    "id": 131,
+    "source": "plugin.txt",
+    "chunk": 21,
+    "text": "How does the 10% profit share work?\nAt the end of each billing cycle Mintzy takes 10% of net realized profits generated through the plugin. No profits means no profit share charge."
+  },
+  {
+    "id": 132,
+    "source": "plugin.txt",
+    "chunk": 22,
+    "text": "What does 10% loss coverage mean?\nIf the plugin results in a net loss Mintzy covers 10% of that loss. We have skin in the game. We are incentivized to perform — not just to charge."
+  },
+  {
+    "id": 133,
+    "source": "plugin.txt",
+    "chunk": 23,
+    "text": "What is automated swing trading?\nThe plugin automates identification, entry and exit of medium-term directional trades within predefined risk parameters — so you benefit without monitoring positions manually."
+  },
+  {
+    "id": 134,
+    "source": "plugin.txt",
+    "chunk": 24,
+    "text": "What is the capital protection framework?\nAutomated risk rules built into the engine — drawdown limits, position sizing controls and hedge triggers — designed to protect capital from outsized losses in adverse conditions."
+  },
+  {
+    "id": 135,
+    "source": "plugin.txt",
+    "chunk": 25,
+    "text": "How many scripts can I trade at once?\nMini covers 500+ scripts, Alpha covers 2000+ and Beta covers the full multi-asset universe. The engine operates on scripts where model confidence is highest."
+  },
+  {
+    "id": 136,
+    "source": "plugin.txt",
+    "chunk": 26,
+    "text": "Do I stay in control?\nYes. You can pause, review or override the plugin at any time. Mintzy has no withdrawal access to your account — it only operates within the trade permissions you grant via your broker's API."
+  },
+  {
+    "id": 137,
+    "source": "plugin.txt",
+    "chunk": 27,
+    "text": "Can I cancel?\nYes at any time. Pending profit share or loss coverage is settled at the end of your current billing period."
+  },
+  {
+    "id": 138,
+    "source": "plugin.txt",
+    "chunk": 28,
+    "text": "Can institutions use the Plugin?\nYes. The architecture scales from individual HNI accounts to enterprise deployments with no performance degradation. Institutional clients are served through the Extension Layer with custom pricing. Customer Ratings Automated Trading Plugin 4.4 Overall Rating Automation Reliability: Capital Protection: Broker Integration: What Our Users Say “Reduces time monitoring positions — I stay in control while repetitive work is automated.” Nitin K. Full-Time Trader 4.8/5 “Capital protection framework sets it apart — built for risk-adjusted growth.” Deepak M. Swing Trader 4.9/5 “Easy broker connection and straightforward onboarding — automation is surprisingly flexible.” Rahul S. HNI Investor “Smooth execution workflow — scale activity without increasing screen time.” Yash P. Quant Enthusiast “Automation works well — would like more preset strategy templates to start faster.” Karan M. Part-time Trader 4/5 “Powerful plugin with a steep learning curve — worth it after proper onboarding.” Isha G. Retail Investor 3.5/5 “The plugin significantly reduces the time spent monitoring positions. I still remain in control, but much of the repetitive execution work is automated.”"
+  },
+  {
+    "id": 139,
+    "source": "seed.txt",
+    "chunk": 1,
+    "text": "AI-Powered Market Predictions\nMintzy Seed combines advanced machine learning with real-time market data to deliver precise price forecasts, pattern recognition, and actionable trading intelligence powered by our proprietary AI models. Launch Terminal Learn More What you Get"
+  },
+  {
+    "id": 140,
+    "source": "seed.txt",
+    "chunk": 2,
+    "text": "Smarter Market Timing\nBehavioral and liquidity aware forecasting designed around evolving market conditions. Custom Intelligence Infrastructure"
+  },
+  {
+    "id": 141,
+    "source": "seed.txt",
+    "chunk": 3,
+    "text": "Continuous Market Monitoring\nTrack volatility shifts, predictive movement patterns, and changing market behavior in real time."
+  },
+  {
+    "id": 142,
+    "source": "seed.txt",
+    "chunk": 4,
+    "text": "Cross Market Intelligence\nAccess forecasting infrastructure across Equity, Derivatives, and Crypto through one connected analytical layer."
+  },
+  {
+    "id": 143,
+    "source": "seed.txt",
+    "chunk": 5,
+    "text": "Cleaner Trading Decisions\nReduce information overload through structured forecasting and statistically driven analytical outputs. How to Use Seed"
+  },
+  {
+    "id": 144,
+    "source": "seed.txt",
+    "chunk": 6,
+    "text": "Authenticate\nGenerate an API token to securely connect your account to the forecasting engine."
+  },
+  {
+    "id": 145,
+    "source": "seed.txt",
+    "chunk": 7,
+    "text": "Configure\nSelect market assets, set timeframes, and define analytical parameters for your workflow."
+  },
+  {
+    "id": 146,
+    "source": "seed.txt",
+    "chunk": 8,
+    "text": "Execute\nCall the Seed API to stream real-time forecasts and integrate predictions into your systems. How Mintzy Seed is different? Traditional Tools"
+  },
+  {
+    "id": 147,
+    "source": "seed.txt",
+    "chunk": 9,
+    "text": "Indicator Systems\nRegime Adaptive Intelligence — Behavioral and liquidity aware forecasting designed around evolving market conditions."
+  },
+  {
+    "id": 148,
+    "source": "seed.txt",
+    "chunk": 10,
+    "text": "Static Systems\nTraditional tools rely on fixed indicator systems that struggle when market regimes shift. Analytics Platform"
+  },
+  {
+    "id": 149,
+    "source": "seed.txt",
+    "chunk": 11,
+    "text": "Generic Platforms\nMost analytics platforms are generic, offering limited flexibility for professional quantitative workflows."
+  },
+  {
+    "id": 150,
+    "source": "seed.txt",
+    "chunk": 12,
+    "text": "Data Workflows\nUnified Forecasting Layer — Access forecasting infrastructure across Equity, Derivatives, and Crypto through one connected analytical layer."
+  },
+  {
+    "id": 151,
+    "source": "seed.txt",
+    "chunk": 13,
+    "text": "Fragmented Systems\nDisparate data sources and workflows make it difficult to correlate signals across multiple asset classes."
+  },
+  {
+    "id": 152,
+    "source": "seed.txt",
+    "chunk": 14,
+    "text": "Trading Methodology\nStructured Quant Analysis — Reduce information overload through structured forecasting and statistically driven analytical outputs."
+  },
+  {
+    "id": 153,
+    "source": "seed.txt",
+    "chunk": 15,
+    "text": "Signal Based Trading\nSimple buy/sell signals without contextual analysis lead to reactive rather than proactive decisions. FOR DEVELOPERS Institutional Intelligence. Zero Code Required. Integrate Mintzy's market forecasts directly into your own algorithmic workflows or trading platforms via our clean REST APIs. 100 free API calls to start. ₹3 per call beyond the free tier. Transparent and scalable. No hidden minimums. Read API Documentation API Cost Calculator Monthly API Calls 10,000+ First 100 Calls Free Billable Calls (899) × ₹3 ₹2,697 Estimated Monthly Cost Generate API Key"
+  },
+  {
+    "id": 154,
+    "source": "seed.txt",
+    "chunk": 16,
+    "text": "What exactly is Seed and how does it work?\nSeed is an AI native forecasting and market intelligence infrastructure designed for predictive analytics, quantitative workflows, and structured decision support. It combines advanced machine learning with real-time market data to deliver behavioral and liquidity aware forecasts across multiple asset classes."
+  },
+  {
+    "id": 155,
+    "source": "seed.txt",
+    "chunk": 17,
+    "text": "How reliable are Seed forecasting models?\nForecasts are generated through adaptive models continuously responding to evolving volatility, liquidity movement, and changing market behavior. Accuracy varies based on market conditions, timeframe, and model conviction. Each forecast includes confidence scores reflecting model certainty under current conditions."
+  },
+  {
+    "id": 156,
+    "source": "seed.txt",
+    "chunk": 18,
+    "text": "Which markets and asset classes are supported?\nThe infrastructure supports Equity, Derivatives, and Crypto markets through one connected forecasting environment. Access forecasting across 500+ Indian equities, indices, commodities, and cryptocurrencies with synchronized cross-market analysis."
+  },
+  {
+    "id": 157,
+    "source": "seed.txt",
+    "chunk": 19,
+    "text": "How frequently are predictions and forecasts updated?\nForecasting outputs update continuously based on selected intervals and evolving live market conditions. The system operates in real-time during trading hours with adaptive learning that automatically recalibrates based on new market data."
+  },
+  {
+    "id": 158,
+    "source": "seed.txt",
+    "chunk": 20,
+    "text": "What trading or investing timeframes are available?\nSeed supports intraday, swing, and multi-day analytical workflows across different market structures. From 1-minute to monthly timeframes — predictions work best on 5-minute to hourly charts for intraday and daily to weekly for swing trades."
+  },
+  {
+    "id": 159,
+    "source": "seed.txt",
+    "chunk": 21,
+    "text": "What do confidence scores actually indicate?\nConfidence scores reflect model conviction strength under changing volatility and liquidity environments. Scores range from 0-100%, with above 75% indicating strong conviction, 50-75% moderate confidence, and below 50% weak signals. Confidence helps you filter low-conviction predictions."
+  },
+  {
+    "id": 160,
+    "source": "seed.txt",
+    "chunk": 22,
+    "text": "How does Seed API pricing work?\nSeed APIs operate on a token and usage-based system starting from approximately ₹3 per forecasting call depending on interval configuration, complexity, and infrastructure usage. Each user gets 100 free API calls to start with — no hidden minimums or profit shares. Customer Ratings AI Market Intelligence 4.6 Overall Rating Signal Quality: Market Context: Ease of Interpretation: What Our Users Say “The AI layer saves hours of research. Insights are concise, data-driven, and easy to interpret.” Kunal P. Equity Trader 4.8/5 “Quality market context alongside signals — Mintzy explains why an opportunity exists.” Harsh T. Derivatives Trader 4.9/5 “AI-driven insights work as a great educational resource and remain practical for real investing.” Rishabh G. Finance Student “Forecasts are structured, not bold predictions — encourages disciplined decision-making.” Ankit V. Swing Trader “Useful predictions — would like more historical backtest data visible upfront.” Varun D. Day Trader 4/5 “Thorough API docs — setup took longer than expected, but endpoints deliver reliably.” Pooja R. Developer 3.5/5 “The AI intelligence layer saves me hours of research every week. Instead of spending time screening hundreds of stocks, I can focus only on opportunities that fit my strategy. The insights are concise, data-driven, and easy to interpret.”"
+  },
+  {
+    "id": 161,
+    "source": "seed_terminal.txt",
+    "chunk": 1,
+    "text": "Seed Terminal\nMintzy’s high-performance quantitative environment. Provision access and execute neural networks directly from your browser."
+  },
+  {
+    "id": 162,
+    "source": "seed_terminal.txt",
+    "chunk": 2,
+    "text": "Authenticate\nProvision an encrypted token to bridge your account to the engine."
+  },
+  {
+    "id": 163,
+    "source": "seed_terminal.txt",
+    "chunk": 3,
+    "text": "Configure\nInject ticker symbols and algorithmic parameters into the pipeline."
+  },
+  {
+    "id": 164,
+    "source": "seed_terminal.txt",
+    "chunk": 4,
+    "text": "Execute\nRun the forecast stream and extract actionable data points. Access Credentials"
+  },
+  {
+    "id": 165,
+    "source": "seed_terminal.txt",
+    "chunk": 5,
+    "text": "Prediction terminal\nA connected prediction workspace with sequential input nodes, a theme toggle for the full terminal, and dedicated output panels for every selected stock. Light terminal Input workspace NODE 01 Access token"
+  },
+  {
+    "id": 166,
+    "source": "seed_terminal.txt",
+    "chunk": 6,
+    "text": "OPEN\nAuthenticate the request before any market computation begins. NODE 02 Tickers"
+  },
+  {
+    "id": 167,
+    "source": "seed_terminal.txt",
+    "chunk": 7,
+    "text": "LOCKED\nComplete the previous node to unlock this field. Select one or more tickers NODE 03 Time frame 15m 30m 4 hours NODE 04 Parameter Select a parameter NODE 05 Candle interval"
+  },
+  {
+    "id": 168,
+    "source": "seed_terminal.txt",
+    "chunk": 8,
+    "text": "Start\nComplete each node to unlock the execution node."
+  },
+  {
+    "id": 169,
+    "source": "seed_terminal.txt",
+    "chunk": 9,
+    "text": "Output terminal\nSelect a ticker to view its forecast chart, analysis, and price tape in full width. 0 symbols Tickers: none selected No configuration selected yet"
+  },
+  {
+    "id": 170,
+    "source": "seed_terminal.txt",
+    "chunk": 10,
+    "text": "Market simulation\nNIFTY 50 reference tape while the prediction terminal is idle."
+  },
+  {
+    "id": 171,
+    "source": "seed_terminal.txt",
+    "chunk": 11,
+    "text": "Terminal readiness\nComplete node 1 to activate the start node. output.log token authentication: waiting ticker selection: pending time frame: pending parameter: pending candle interval: pending"
+  },
+  {
+    "id": 172,
+    "source": "seed_terminal.txt",
+    "chunk": 12,
+    "text": "Require expanded bandwidth?\nUpgrade your tier for higher limits and continuous loops. Manage Billing 09:15 10:00 10:45 11:30 12:15 13:00 13:45 14:30 15:15 22378 22453 22528 22603 22661"
+  }
+]

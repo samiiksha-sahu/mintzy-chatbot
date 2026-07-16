@@ -1,0 +1,189 @@
+API DOCS
+API Platform
+Overview
+Getting Started
+Authentication
+Installation
+First Prediction
+API Reference
+Supported Tickers
+Tutorials
+Troubleshooting
+API Keys
+API Section
+Mintzy is a financial information technology company delivering data-driven market forecasting and financial consulting across global financial markets. Our API-driven framework enables scenario-based forecasting for equities, derivatives, and crypto assets.
+This guide helps you set up the Mintzy SDK and make your first API request within minutes. The SDK is designed for developers, quantitative researchers, and system integrators who require programmatic access to market forecasting and analytical services.
+Get Your Access Token
+All Mintzy API requests require authentication via an access token.
+To generate your token:
+Navigate to the API or account settings section
+Generate a new access token
+Important: Store your access token securely. Requests made with invalid or expired tokens will return authentication errors.
+Access Token Authentication
+Mintzy uses token-based authentication to validate API requests. Each client instance must be initialized with a valid access token before making any API calls.
+Initialization Example
+PYTHON
+from Minting import Client
+client = Client(access_token="<TOKEN_GENERATED>")
+Python Requirements
+The Mintzy SDK requires Python 3.7 or higher. Download Python from the official website and follow the installation instructions for your operating system:
+https://www.python.org/downloads
+Verify Python Installation
+Confirm that Python is installed correctly:
+BASH
+python --version
+Install the Mintzy SDK
+Install the Mintzy SDK using pip. All required dependencies are installed automatically, including requests, pymongo, pandas, and flask.
+pip install Minting
+Verify SDK Installation
+Verify that the SDK is installed and accessible:
+python -c "import Minting; print(Minting.__version__)"
+Make Your First Prediction
+Use the Mintzy client to fetch scenario-based market predictions. Initialize the client with your access token and call the prediction method to retrieve forecasted data.
+example.py
+# Initialize Client
+client = Client(access_token="YOUR_ACCESS_TOKEN")
+# Make Prediction
+prediction = client.get_prediction(
+tickers=["RELIANCE"],
+timeframe="4 hours",
+parameters=["close"]
+print(prediction)
+METHOD
+client.get_prediction
+Retrieves market predictions for one or more tickers and returns the results in a structured table.
+Response Format
+The response is formatted with the following columns:
+Ticker
+Date
+Time
+Predicted Price
+Parameters
+Parameters	Type	Description
+tickers	list	List of stock tickers
+timeframe	string	Prediction horizon (e.g., "4 hours")
+parameters	list	Prediction fields such as "close"
+A non-exhaustive list of supported assets available for forecasting.
+ABB
+ACC
+ADANIENT
+ADANIGREEN
+ADANIPORTS
+ADANIPOWER
+ALKEM
+AMBUJACEM
+APOLLOHOSP
+ASIANPAINT
+ASTRAL
+AUROPHARMA
+AXISBANK
+BAJAJFINSV
+BAJAJHLDNG
+BAJFINANCE
+BANDHANBNK
+BANKBARODA
+BERGEPAINT
+BHARTIARTL
+BOSCHLTD
+BRITANNIA
+CHOLAFIN
+CIPLA
+COALINDIA
+COLPAL
+CONCOR
+DABUR
+DIVISLAB
+DLF
+DRREDDY
+EICHERMOT
+FEDERALBNK
+GAIL
+GODREJCP
+GRASIM
+HAVELLS
+HCLTECH
+HDFCAMC
+HDFCBANK
+HDFCLIFE
+HEROMOTOCO
+HINDALCO
+HINDUNILVR
+HINDZINC
+ICICIBANK
+ICICIGI
+ICICIPRULI
+INDIGO
+INDUSTOWER
+INFY
+ITC
+JINDALSTEL
+JSWENERGY
+JSWSTEEL
+KOTAKBANK
+LICI
+LTIM
+LUPIN
+MARICO
+MARUTI
+MOTHERSON
+MRF
+MUTHOOTFIN
+NESTLEIND
+NMDC
+NTPC
+OIL
+ONGC
+PAGEIND
+PIDILITIND
+PIIND
+PNB
+POWERGRID
+RECLTD
+SBILIFE
+SBIN
+SHREECEM
+SIEMENS
+SRF
+SUNPHARMA
+TATACHEM
+TATACONSUM
+TATAELXSI
+TATAPOWER
+TATASTEEL
+TCS
+TORNTPHARM
+TORNTPOWER
+TRENT
+TVSMOTOR
+UBL
+ULTRACEMCO
+VEDL
+WIPRO
+Fetching Single Ticker Predictions
+5 minutes
+Beginner
+Handling Multiple Tickers
+10 minutes
+Intermediate
+Troubleshooting Common Errors
+15 minutes
+Advanced
+Troubleshooting Summary
+For a complete list of error codes and detailed fixes, please see the Troubleshooting Tutorial above.
+Invalid Access Token
+Unsupported Tickers
+No Data Available
+Installation Errors
+AI-powered financial intelligence and adaptive forecasting for modern investors, developers, and institutions.
+PRODUCTS
+RESOURCES
+Engineering Blog
+Help Center
+Community
+COMPANY
+Careers
+LEGAL
+Security
+© 2026 Mintzy All rights reserved.
+GitHub
+Decline

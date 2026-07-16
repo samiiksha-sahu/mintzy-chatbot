@@ -1,0 +1,43 @@
+Building the Future of AI-Powered Investing
+Mintzy is an AI-powered financial intelligence platform that combines machine learning, quantitative research, and adaptive forecasting to help investors make smarter and more confident investment decisions.
+Equity scripts covered
+Innovation partners
+Years of AI research
+Intelligence products
+OUR MISSION
+Democratizing institutional-grade research
+At Mintzy, our mission is to democratize institutional-grade investment research through artificial intelligence, making personalized, data-driven financial insights accessible to every investor.
+OUR VISION
+Mintzy aims to become the one-stop solution for intelligent investing across cross-asset markets, powered by personalized strategies, AI-driven insights, and data-driven intelligence that empower smarter financial decisions.
+Explore Mintzy
+SUPPORTED BY
+Backed by Leading Innovation Ecosystems
+Mintzy is proud to be part of globally recognized startup and technology programs that accelerate innovation and help us build the future of AI-powered financial intelligence.
+DPIIT Startup India
+NVIDIA Inception Program
+AWS Startups
+Microsoft for Startups (Azure)
+Growth Avenue
+RESEARCH & INNOVATION
+Innovation at the heart of Mintzy
+We continuously research and develop advanced AI models, quantitative strategies, and adaptive forecasting systems to deliver reliable, personalized, and data-driven investment intelligence across financial markets.
+Advanced AI Models
+Continuous research into machine learning architectures tuned for financial time series and market signals.
+Quantitative Strategies
+Rigorous development of systematic strategies backed by data, backtesting, and risk-aware design.
+Adaptive Forecasting
+Forecasting systems that adapt to changing regimes, volatility, and cross-asset market dynamics.
+Personalized Intelligence
+Investment insights tailored to individual goals, risk profiles, and portfolio context.
+FROM THE FOUNDERS
+Why we built Mintzy
+We started Mintzy because we saw a gap between the sophistication of institutional investment research and what everyday investors could actually access. Markets move fast, data is abundant, but turning that data into confident decisions still felt out of reach for most people.
+Our goal is simple: bring the rigor of quantitative research and adaptive AI forecasting to every investor — without the complexity. Every product we ship, from our plugin terminal to Seed and API, is built with that mission in mind.
+Thank you for being part of this journey. We're just getting started.
+OUR TEAM
+Meet The People Behind The Platform
+Our team blends AI research, quantitative finance, and product engineering to build smarter tools for more confident investing.
+Tanmay Chaturvedi
+Co-founder & CEO
+Om Kulthe
+Co-founder & CTO

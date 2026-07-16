@@ -1,0 +1,13 @@
+Backtest Lab
+Validate strategies before going live
+Run historical NSE simulations with stop-loss rules, capital allocation, and live portfolio analytics — all in one workflow.
+Open Backtester
+CAPABILITIES
+Everything you need to validate a strategy
+Configure tickers, risk rules, and date ranges — then review portfolio-level analytics before taking anything live.
+Historical Simulation
+Replay Mintzy logic on NSE historical data across custom date ranges and candle intervals.
+Per-Ticker Controls
+Set capital, stop loss, and trade sizing independently for every stock in your basket.
+Live Result Streaming
+Portfolio equity, P&L charts, and per-ticker stats update as each simulation completes.

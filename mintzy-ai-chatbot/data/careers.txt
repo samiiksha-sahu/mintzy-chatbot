@@ -1,0 +1,51 @@
+Build the Intelligence Layer for Financial Markets
+Mintzy is building forecasting, automation, and quantitative intelligence infrastructure for the next generation of financial markets. If you're excited by difficult problems, real ownership, and meaningful impact, we'd love to hear from you.
+WHAT WE BUILD
+Forecasting systems, intelligence APIs, automation infrastructure, and quantitative tooling for modern markets.
+HOW WE WORK
+Small teams, fast iteration, direct ownership, and a bias toward building instead of discussing.
+WHY IT MATTERS
+We want advanced market intelligence to be usable by every participant, not only large funds and desks.
+WHO WE ARE
+AI-native infrastructure for smarter market participation.
+Mintzy is an AI native financial technology company building forecasting, automation, and quantitative intelligence infrastructure for modern financial markets.
+We believe institutional-grade market intelligence should not be limited to large funds and trading desks. Our mission is to make advanced forecasting and decision-making systems accessible to every market participant.
+Today, we're building the technology that powers smarter participation in financial markets from intelligence APIs and automated trading infrastructure to next-generation forecasting systems.
+Recognized at TiE University's Global Pitch Competition and supported through strategic technology partnerships, we're assembling a team of builders, researchers, and engineers to shape the future of market intelligence.
+WHAT WE VALUE
+The principles behind the work.
+Curiosity Over Credentials
+Great ideas can come from anywhere. We value people who ask better questions, learn quickly, and constantly push beyond what they already know.
+Ownership Over Titles
+At Mintzy, responsibility matters more than hierarchy. We trust people to take initiative, solve problems, and drive outcomes.
+Execution Over Meetings
+Ideas are valuable only when they become reality. We move quickly, iterate continuously, and focus on building things that create measurable impact.
+OPEN ROLES
+Join us in building the operating layer for intelligent markets.
+We are hiring across engineering and research functions that sit close to core product, core infrastructure, and core intelligence systems.
+TEAM OPENING
+Backend & API Engineering
+Build the infrastructure powering forecasting systems, broker integrations, and real time market intelligence. You'll design scalable services, APIs, and backend systems that support the next generation of financial technology.
+Frontend & Product Engineering
+Create products that transform complex financial intelligence into intuitive user experiences. You'll help shape how traders, developers, and institutions interact with Mintzy.
+AI & Quantitative Research
+Research market behavior, forecasting models, and decision systems that power our intelligence layer. You'll work at the intersection of machine learning, finance, and quantitative analysis.
+Infrastructure & Platform Engineering
+Build reliable, secure, and scalable systems that support forecasting pipelines, automation frameworks, and production-grade financial infrastructure.
+WHY JOIN EARLY?
+Early builders shape the company, not just the roadmap.
+If you want to work on foundational systems, learn quickly, and see your decisions directly affect the product, this is the stage where that happens.
+Small Team. Large Impact.
+Early team members influence product direction, architecture decisions, research priorities, and company culture. Your work directly shapes the future of the company.
+Real Ownership
+We value people who take initiative and think like builders. You'll have the freedom to contribute beyond your job description and the responsibility to help turn ideas into reality.
+Work On Difficult Problems
+From forecasting systems and AI infrastructure to automation and quantitative research, you'll be working on problems that genuinely matter.
+Learn Faster
+Startups compress years of learning into months. You'll collaborate closely with engineers, researchers, and operators while building products used by real users in real markets.
+READY TO BUILD?
+If you're excited by market intelligence, we'd love to hear from you.
+Whether your background is in AI systems, quantitative research, infrastructure, or product engineering, reach out if you want to help build forecasting and automation systems from the ground up.
+CONTACT
+careers@mintzy.ai
+Send a short note about yourself, the role you're interested in, and the kind of systems you want to build.

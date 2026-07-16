@@ -1,0 +1,126 @@
+An End to End Automated Trading System
+Mintzy Plugin is an end-to-end automated trading system that unifies market data, decision-making, execution, and risk control, using a data-driven machine learning pipeline.
+Launch Terminal
+Why Mintzy?
+What you Get
+End to End Execution
+Handles the full trade lifecycle from signal generation to execution and hedge management.
+Dynamic Strategy Selection
+Strategies are not fixed. They are selected and adapted through the internal ML pipeline based on scenario context.
+Automated Swing Trade Execution
+Executes swing trade workflows without manual intervention.
+Integrated Hedge Handling
+Supports hedge creation adjustment and closure as part of the execution flow.
+High Speed Order Execution
+Capable of firing multiple orders within a single second in a coordinated manner.
+How Mintzy Plugin is different?
+Traditional Advisory
+Investor Specific Personalization
+Mintzy operates as an independent research and analysis platform. It does not earn through brokerage influence or execution incentives which keeps insights objective.
+Limited Personalization
+Most platforms are tied to execution or distribution which can bias insights toward activity rather than decision quality.
+Live Market Awareness
+Mintzy analyzes market data using research backed AI models with adaptive forecasting and contextual insights rather than surface level indicators.
+Periodic Market Awareness
+Insights are often rule based indicator driven or generic with limited forecasting depth.
+Proprietary Search Capability
+Designed for traders institutions and advanced users who require system level integration and decision support.
+Limited Search Capability
+Primarily built for basic usage with limited flexibility for professional workflows.
+Tuned Hallucination Control
+Risk assessment is embedded into every insight including probability exposure and scenario awareness to support disciplined trading.
+Medium Hallucination Control
+Risk checks are typically disconnected from signals leading to reactive rather than proactive decisions.
+PLUGIN FRAMEWORK PRICING
+Transparent, performance-aligned pricing.
+Mintzy wins when you win.
+𝓂ᵢₙᵢ
+MINI
+For traders starting with AI-assisted equity trading.
+₹3,00,000
+/ year
++ 10% PROFIT SHARE
+WHAT'S INCLUDED
+500+ equity scripts
+Up to 10,000 trades/year
+Automated swing trading & hedging
+Capital protection framework
+Sub-1ms execution via direct demat
+Works across Zerodha, Dhan, Upstox, Angel One
+Standard support
+Select Plan
+ALPHA
+For active traders who want broader market coverage.
+₹5,00,000
+2000+ equity scripts
+Everything in Mini
+Mid-cap and extended script universe
+Priority support
+Continue with Plan
+BETA
+For sophisticated traders and institutions.
+₹10,00,000
+Multi-asset: Equity, Derivatives & Crypto
+Everything in Alpha
+Cross-asset signal correlation
+Dedicated account support
+Extension Layer — Enterprise
+For institutions, trading desks and HNI clients with specific requirements.
+Bespoke script selection
+Custom API integration
+Strategy alignment
+Dedicated team support
+Custom Pricing
+Book a Demo
+The Mintzy Guarantee
+We take 10% of profits only. We also cover 10% of losses. We don't make money unless you do.
+What is the Plugin Framework?
+Mintzy's core subscription product. It gives traders automated access to AI-driven swing trading signals, hedging execution and capital protection tools through a plug-in connected to your existing broker.
+How does the 10% profit share work?
+At the end of each billing cycle Mintzy takes 10% of net realized profits generated through the plugin. No profits means no profit share charge.
+What does 10% loss coverage mean?
+If the plugin results in a net loss Mintzy covers 10% of that loss. We have skin in the game. We are incentivized to perform — not just to charge.
+What is automated swing trading?
+The plugin automates identification, entry and exit of medium-term directional trades within predefined risk parameters — so you benefit without monitoring positions manually.
+What is the capital protection framework?
+Automated risk rules built into the engine — drawdown limits, position sizing controls and hedge triggers — designed to protect capital from outsized losses in adverse conditions.
+How many scripts can I trade at once?
+Mini covers 500+ scripts, Alpha covers 2000+ and Beta covers the full multi-asset universe. The engine operates on scripts where model confidence is highest.
+Do I stay in control?
+Yes. You can pause, review or override the plugin at any time. Mintzy has no withdrawal access to your account — it only operates within the trade permissions you grant via your broker's API.
+Can I cancel?
+Yes at any time. Pending profit share or loss coverage is settled at the end of your current billing period.
+Is there a minimum capital requirement?
+Can institutions use the Plugin?
+Yes. The architecture scales from individual HNI accounts to enterprise deployments with no performance degradation. Institutional clients are served through the Extension Layer with custom pricing.
+Customer Ratings
+Automated Trading Plugin
+4.4
+Overall Rating
+Automation Reliability:
+Capital Protection:
+Broker Integration:
+What Our Users Say
+“Reduces time monitoring positions — I stay in control while repetitive work is automated.”
+Nitin K.
+Full-Time Trader
+4.8/5
+“Capital protection framework sets it apart — built for risk-adjusted growth.”
+Deepak M.
+Swing Trader
+4.9/5
+“Easy broker connection and straightforward onboarding — automation is surprisingly flexible.”
+Rahul S.
+HNI Investor
+“Smooth execution workflow — scale activity without increasing screen time.”
+Yash P.
+Quant Enthusiast
+“Automation works well — would like more preset strategy templates to start faster.”
+Karan M.
+Part-time Trader
+4/5
+“Powerful plugin with a steep learning curve — worth it after proper onboarding.”
+Isha G.
+Retail Investor
+3.5/5
+“The plugin significantly reduces the time spent monitoring positions. I still remain in control, but much of the repetitive execution work is automated.”
