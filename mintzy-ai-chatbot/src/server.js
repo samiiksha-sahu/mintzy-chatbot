@@ -12,6 +12,11 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+// Health check endpoint for keep-alive pings (cron-job.org)
+app.get("/", (req, res) => {
+  res.json({ status: "ok" });
+});
+
 /**
  * POST /api/chat
  * Called by the FastAPI backend.
