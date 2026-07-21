@@ -237,4 +237,5 @@
   /* 🌟 This hides the scrollbar completely 🌟 */
   overflow: hidden; 
 }
-#cw-send { background: var(--cw-blue); border: none; color: #fff; width: 42px; border-radius: 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+#cw-send { background: var(--cw-blue); border: none; color: #fff; width: 42px; height: 42px; align-self: flex-end; border-radius: 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+#cw-send svg { width: 22px; height: 22px; }
