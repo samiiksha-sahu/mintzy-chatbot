@@ -52,11 +52,11 @@
       el("h2", {}, "Hey There, I'm Mynt")
     );
 
-    const msgs = el("div", { id: "cw-messages" });
+    const msgs = el("div", { id: "cw-messages", "data-lenis-prevent": "true" });
     msgs.style.minHeight = "0";
     
     // Assemble Main Panel
-    const panel = el("div", { id: "cw-panel" }, 
+    const panel = el("div", { id: "cw-panel", "data-lenis-prevent": "true" }, 
       splash, // Overlay placed on top
       el("div", { id: "cw-header" }, el("div", {}, el("div", { class: "cw-title" }, CONFIG.title), el("div", { class: "cw-subtitle" }, CONFIG.subtitle)), el("button", { id: "cw-close" }, "\u2715")),
       welcomeBlock,
@@ -181,6 +181,9 @@
       ui.splash.classList.remove("cw-hidden");
       opened = false;
     }
+
+    const observer = new MutationObserver(adjustPositionForCookieBanner);
+    observer.observe(document.body, { childList: true, subtree: true });
 
     ui.bubble.addEventListener("click", () => ui.panel.classList.add("cw-open"));
     ui.close.addEventListener("click", () => {

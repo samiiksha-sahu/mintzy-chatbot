@@ -88,7 +88,7 @@ async function askLLM(question, context, history = []) {
       temperature: 0,
       top_p: 1,
       frequency_penalty: 0.5,
-      max_tokens: 4096,
+      max_tokens: 1024,
       messages: [
         { role: "system", content: systemPrompt },
         ...historyMessages,
