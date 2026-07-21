@@ -150,9 +150,10 @@
   // Avoid overlapping with Cookie Consent banner
   function adjustPositionForCookieBanner() {
     const consent = localStorage.getItem("mintzy-cookie-consent");
+    const hasBanner = document.getElementById("mintzy-cookie-banner") !== null;
     const bubble = document.getElementById("cw-bubble");
     const panel = document.getElementById("cw-panel");
-    if (consent === null) {
+    if (consent === null && hasBanner) {
       if (bubble) bubble.style.setProperty("bottom", "96px", "important");
       if (panel) panel.style.setProperty("bottom", "160px", "important");
     } else {
