@@ -172,9 +172,25 @@
   function init() {
     const ui = build();
     adjustPositionForCookieBanner(); let opened = false;
+
+    function resetConversation() {
+      ui.messages.innerHTML = "";
+      ui.input.value = "";
+      ui.input.style.height = "auto";
+      localStorage.removeItem(SESSION_KEY);
+      ui.splash.classList.remove("cw-hidden");
+      opened = false;
+    }
+
     ui.bubble.addEventListener("click", () => ui.panel.classList.add("cw-open"));
-    ui.close.addEventListener("click", () => ui.panel.classList.remove("cw-open"));
-    ui.splashClose.addEventListener("click", () => ui.panel.classList.remove("cw-open"));
+    ui.close.addEventListener("click", () => {
+      ui.panel.classList.remove("cw-open");
+      resetConversation();
+    });
+    ui.splashClose.addEventListener("click", () => {
+      ui.panel.classList.remove("cw-open");
+      resetConversation();
+    });
     
     ui.startBtn.addEventListener("click", () => { 
       ui.splash.classList.add("cw-hidden"); 
