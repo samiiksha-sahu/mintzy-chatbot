@@ -1,174 +1,224 @@
 :root {
-  --cw-navy: #0B1221;
-  --cw-navy-2: #111827;
-  --cw-blue: #1D4ED8; 
-  --cw-splash-blue: #1E40AF; 
-  --cw-blue-light: #DBEAFE;
+  /* Colors based on your screenshots */
+  --cw-navy: #09101E;
+  --cw-blue: #2563EB; /* Vibrant blue for bubbles and launcher */
+  --cw-blue-grad-start: rgb(11, 65, 149); /* From mintzy.in DevTools inspect */
+  --cw-blue-grad-end: rgb(18, 109, 251);  /* From mintzy.in DevTools inspect */
+  --cw-splash-blue: #1D4ED8; /* Slightly deeper blue for splash screen */
   --cw-paper: #FFFFFF;
   --cw-ink: #1E293B; 
   --cw-muted: #94A3B8;
   --cw-radius: 16px;
   --cw-shadow: 0 12px 32px rgba(11, 18, 33, 0.22);
-  --cw-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --cw-font: 'Plus Jakarta Sans', 'Plus Jakarta Sans Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --cw-mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
 }
 
 /* =========================================
-   LAUNCHER BUTTON (PILL SHAPE) & TOOLTIP
+   LAUNCHER BUTTON (Image 3)
    ========================================= */
 #cw-bubble {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  width: 64px; 
-  height: 64px;
-  border-radius: 50%;
-  padding: 0;
-  background: var(--cw-blue);
+  position: fixed; bottom: 24px; right: 24px;
+  width: 64px; height: 64px; border-radius: 50%; padding: 0;
+  background: linear-gradient(to right, var(--cw-blue-grad-start), var(--cw-blue-grad-end)); /* fallback */
+  background: linear-gradient(to right in oklab, var(--cw-blue-grad-start) 0%, var(--cw-blue-grad-end) 100%);
   box-shadow: var(--cw-shadow);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 999998;
-  border: none;
-  transition: transform 0.18s ease, background 0.2s ease;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; z-index: 999998; border: none;
+  transition: transform 0.18s ease, filter 0.2s ease;
 }
-#cw-bubble:hover { transform: scale(1.04); background: var(--cw-splash-blue); }
+#cw-bubble:hover { transform: scale(1.04); filter: brightness(1.08); }
 
-#cw-bubble span { display: none; }
 .cw-tooltip {
-  position: absolute;
-  bottom: calc(100% + 12px);
-  right: 0;
-  background: #ffffff;
-  color: var(--cw-ink);
-  padding: 12px 16px;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-  font-size: 14px;
-  font-weight: 500;
-  white-space: pre-wrap;
-  line-height: 1.4;
-  pointer-events: none;
-  opacity: 0;
-  transform: translateY(10px);
+  position: absolute; bottom: calc(100% + 12px); right: 0;
+  background: #ffffff; color: var(--cw-ink); padding: 12px 16px;
+  border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  font-size: 14px; font-weight: 500; white-space: pre-wrap;
+  pointer-events: none; opacity: 0; transform: translateY(10px);
   transition: opacity 0.2s ease, transform 0.2s ease;
-  text-align: left;
-  min-width: 220px;
-  border: 1px solid #E2E8F0;
+  text-align: left; min-width: 200px; border: 1px solid #E2E8F0;
+  font-family: var(--cw-font);
 }
-#cw-bubble:hover .cw-tooltip {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-#cw-bubble .cw-pulse { display: none; }
+#cw-bubble:hover .cw-tooltip { opacity: 1; transform: translateY(0); }
 
 /* =========================================
-   FLOATING CHAT PANEL 
+   CHAT PANEL BASE
    ========================================= */
 #cw-panel {
-  position: fixed;
-  bottom: 90px;
-  right: 24px;
-  width: 360px;
-  height: 620px;
-  max-height: calc(100vh - 120px);
-  background: var(--cw-paper);
+  position: fixed; bottom: 110px; right: 24px;
+  width: 360px; height: 620px; max-height: calc(100vh - 140px);
+  
+  /* 🌟 The Frosted Glass Magic 🌟 */
+  background: rgba(255, 255, 255, 0.85); 
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Required for Safari */
+  
   box-shadow: 0 16px 48px rgba(0,0,0,0.18);
-  border-radius: 16px;
-  overflow: hidden;
-  z-index: 999999;
-  display: flex;
-  flex-direction: column;
-  font-family: var(--cw-font);
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(20px);
+  border-radius: 16px; overflow: hidden; z-index: 999999;
+  display: flex; flex-direction: column; font-family: var(--cw-font);
+  opacity: 0; pointer-events: none; transform: translateY(20px);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
-#cw-panel.cw-open {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
-}
+#cw-panel.cw-open { opacity: 1; pointer-events: auto; transform: translateY(0); }
 
 #cw-header {
-  background: var(--cw-navy);
-  color: #fff;
+  /* 🌟 Replace the old background with a gradient 🌟 */
+  background: linear-gradient(135deg, #09101E 0%, #0F172A 100%);
+  
+  color: #fff; 
   padding: 18px 20px;
-  display: flex;
-  align-items: center;
+  display: flex; 
+  align-items: center; 
   justify-content: space-between;
 }
-#cw-header .cw-title { font-weight: 600; font-size: 15px; }
-#cw-header .cw-subtitle {
-  font-family: var(--cw-mono);
-  font-size: 11px;
-  color: var(--cw-blue);
-  letter-spacing: 0.04em;
-  margin-top: 2px;
-}
-#cw-close {
-  background: none;
-  border: none;
-  color: #94A3B8;
-  font-size: 20px;
-  cursor: pointer;
-  line-height: 1;
-}
+#cw-header .cw-title { font-weight: 600; font-size: 16px; }
+#cw-header .cw-subtitle { font-family: var(--cw-mono); font-size: 11px; color: var(--cw-blue); letter-spacing: 0.04em; margin-top: 2px; }
+#cw-close { background: none; border: none; color: #94A3B8; font-size: 20px; cursor: pointer; line-height: 1; }
 #cw-close:hover { color: #fff; }
 
 /* =========================================
-   MESSAGES AREA
+   SPLASH SCREEN OVERLAY (Image 1)
    ========================================= */
-   
+#cw-splash {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(to right, var(--cw-blue-grad-start), var(--cw-blue-grad-end)); /* fallback */
+  background: linear-gradient(to right in oklab, var(--cw-blue-grad-start) 0%, var(--cw-blue-grad-end) 100%);
+  color: #ffffff; z-index: 100; 
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+#cw-splash.cw-hidden { opacity: 0; visibility: hidden; }
+#cw-splash-close {
+  position: absolute; top: 20px; left: 20px; background: rgba(255, 255, 255, 0.15); border: none;
+  color: #fff; width: 36px; height: 36px; border-radius: 10px; cursor: pointer;
+}
+#cw-splash h1 { font-size: 26px; font-weight: 400; margin: 0 0 30px 0; color: #ffffff !important; white-space: pre-line; }
+.cw-avatar {
+  width: 120px; height: 120px; background: transparent; border-radius: 50%; margin: 0 auto 30px;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.04);
+}
+#cw-splash h2 { font-size: 18px; font-weight: 400; margin: 0 0 30px 0; color: #ffffff !important; }
+#cw-start-btn {
+  background: #ffffff !important; color: var(--cw-splash-blue) !important; border: none; padding: 14px 36px;
+  border-radius: 30px; font-size: 15px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  transition: transform 0.2s, background 0.2s;
+}
+#cw-start-btn:hover { background: #f8f8f8 !important; transform: translateY(-2px); }
+
+/* =========================================
+   NATIVE WELCOME HEADER (Image 2)
+   ========================================= */
+#cw-panel-welcome {
+  display: flex; flex-direction: column; align-items: center;
+  padding: 30px 20px 10px 20px; 
+  
+  /* 🌟 Let the glass show through 🌟 */
+  background: transparent; 
+  
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden; max-height: 250px; opacity: 1;
+}
+/* This class hides the header smoothly when scrolling up */
+#cw-panel-welcome.cw-hidden-header { 
+  max-height: 0; padding-top: 0; padding-bottom: 0; opacity: 0; 
+}
+
+.cw-panel-avatar { width: 70px; height: 70px; margin-bottom: 15px; }
+#cw-panel-welcome h2 { font-size: 20px; font-weight: 600; color: var(--cw-ink); margin: 0; }
+
+/* =========================================
+   MESSAGES AREA (Image 2)
+   ========================================= */
 #cw-messages {
-  flex: 1; overflow-y: auto; padding: 18px; display: flex; flex-direction: column; gap: 12px;
-  background: var(--cw-paper);
-  min-height: 0; /* 🌟 critical fix: without this, flex items refuse to shrink
-                     below their content height, so #cw-messages just grows
-                     forever instead of scrolling, and the fixed-height
-                     #cw-panel clips the overflow instead of scrolling it. */
+  flex: 1; overflow-x: hidden; overflow-y: auto; padding: 18px;
+  display: flex; flex-direction: column; gap: 12px; 
+  
+  /* 🌟 Let the glass show through 🌟 */
+  background: transparent; 
+  
+  box-sizing: border-box;
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+  min-height: 0; /* 🌟 critical fix: enables internal scrollbars by allowing flex box to shrink */
 }
 #cw-messages::before {
   content: "";
   display: block;
   margin-top: auto;
 }
-.cw-msg { padding: 10px 14px; border-radius: 14px; font-size: 15.5px; line-height: 1.45; white-space: pre-wrap; }
-.cw-msg.cw-user {
-  max-width: 82%; align-self: flex-end; background: #ffffff; color: var(--cw-ink);
-  border: 1px solid #E2E8F0; border-bottom-right-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+#cw-messages::-webkit-scrollbar {
+  display: none; /* 🌟 Completely hides the scrollbar visually 🌟 */
 }
-.cw-bot-row { display: flex; align-items: flex-end; gap: 8px; align-self: flex-start; max-width: 92%; }
-.cw-bot-row .cw-msg.cw-bot, .cw-bot-row .cw-msg.cw-typing { max-width: 100%; }
-.cw-bot-avatar {
-  width: 38px; height: 38px; background: transparent; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+.cw-msg { 
+  padding: 12px 14px; 
+  border-radius: 12px; 
+  font-size: 15.5px; 
+  line-height: 1.45; 
+  white-space: pre-wrap; 
+  word-wrap: break-word; 
+  max-width: 90%; 
+  overflow: hidden; 
+  flex-shrink: 0; /* 🌟 THIS FIXES THE SQUISHING AND CROPPING 🌟 */
 }
-.cw-msg.cw-bot { background: var(--cw-blue); color: #ffffff; border: none; box-shadow: none; border-bottom-left-radius: 4px; }
-.cw-msg.cw-bot h1, .cw-msg.cw-bot h2, .cw-msg.cw-bot h3 { font-size: 15.5px; font-weight: 700; color: #ffffff !important; margin: 10px 0 4px; }
-.cw-msg.cw-bot h1:first-child, .cw-msg.cw-bot h2:first-child, .cw-msg.cw-bot h3:first-child { margin-top: 0; }
-.cw-msg.cw-bot p { margin: 0 0 6px 0 !important; }
-.cw-msg.cw-bot p:last-child { margin-bottom: 0 !important; }
-.cw-msg.cw-bot ul { margin: 8px 0 12px 0; padding-left: 24px; list-style-type: disc; }
-.cw-msg.cw-bot ol { margin: 8px 0 12px 0; padding-left: 24px; list-style-type: decimal; }
-.cw-msg.cw-bot li { margin-bottom: 10px; line-height: 1.45; }
-.cw-msg.cw-bot li::marker { color: #ffffff; }
-.cw-msg.cw-bot li > ul, .cw-msg.cw-bot li > ol { margin-top: 4px; margin-bottom: 4px; }
-.cw-msg.cw-bot strong { color: #ffffff; }
-.cw-msg.cw-bot a { color: var(--cw-blue-light); text-decoration: underline; font-weight: 700; }
-.cw-msg.cw-bot hr { border: none; border-top: 2px solid rgba(255, 255, 255, 0.4); margin: 14px 0; }
-.cw-msg.cw-bot > *:last-child { margin-bottom: 0; }
+/* User Bubbles */
+.cw-msg.cw-user { align-self: flex-end; background: #F1F5F9; color: var(--cw-ink);border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06); border-bottom-right-radius: 4px; }
+
+/* Bot Bubbles with Avatar Row */
+.cw-bot-row { 
+  display: flex; 
+  align-items: flex-end; 
+  gap: 8px; 
+  align-self: flex-start; 
+  max-width: 92%; 
+  flex-shrink: 0; /* 🌟 Ensures bot messages stay full height too 🌟 */
+}
+.cw-bot-avatar { width: 32px; height: 32px; background: transparent; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.cw-msg.cw-bot {
+  background: linear-gradient(to right, var(--cw-blue-grad-start), var(--cw-blue-grad-end)); /* fallback for older browsers */
+  background: linear-gradient(to right in oklab, var(--cw-blue-grad-start) 0%, var(--cw-blue-grad-end) 100%);
+  color: #ffffff; border: none; border-bottom-left-radius: 4px;
+  box-shadow: 0 4px 14px rgba(11, 65, 149, 0.25);
+}
+
+/* Bot Styling rules */
+.cw-msg.cw-bot h1, 
+.cw-msg.cw-bot h2, 
+.cw-msg.cw-bot h3 { 
+  font-size: 17.5px;       /* 🌟 Increased by +2px (was 14.5px) */
+  font-weight: 700; 
+  margin: 10px 0 6px 0; 
+  color: #ffffff !important; /* 🌟 Forces the text to be pure white */
+}.cw-msg.cw-bot strong {
+  color: #ffffff !important; 
+  font-weight: 700;
+}
+.cw-msg.cw-bot p {
+  margin: 0 0 6px 0 !important;
+}
+.cw-msg.cw-bot p:last-child {
+  margin-bottom: 0 !important;
+}
+.cw-msg.cw-bot a { color: #DBEAFE; text-decoration: underline; font-weight: 700; }
+
+/* Code Blocks */
 .cw-msg.cw-bot pre {
-  overflow-x: auto; max-width: 100%; background: var(--cw-navy); color: #ffffff; padding: 8px 10px;
-  border-radius: 8px; font-size: 13px; border: 1px solid rgba(255,255,255,0.1);
+  display: block; overflow-x: auto; max-width: 100%; white-space: pre;
+  background: var(--cw-navy); color: #ffffff; padding: 10px; margin: 10px 0;
+  border-radius: 8px; font-size: 15px; font-family: var(--cw-mono);
 }
-.cw-msg.cw-bot code { font-family: var(--cw-mono); font-size: 13.5px; word-break: break-word; }
-.cw-msg.cw-bot pre code { white-space: pre; }
-.cw-msg.cw-typing { background: var(--cw-blue); border: none; box-shadow: none; display: flex; gap: 4px; padding: 12px 14px; border-bottom-left-radius: 4px; }
-.cw-dot { width: 6px; height: 6px; border-radius: 50%; background: #ffffff; animation: cw-bounce 1.1s infinite ease-in-out; }
+.cw-msg.cw-bot pre::-webkit-scrollbar { height: 6px; }
+.cw-msg.cw-bot pre::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.3); border-radius: 3px; }
+
+/* Typing Indicator */
+.cw-msg.cw-typing {
+  background: linear-gradient(to right, var(--cw-blue-grad-start), var(--cw-blue-grad-end)); /* fallback for older browsers */
+  background: linear-gradient(to right in oklab, var(--cw-blue-grad-start) 0%, var(--cw-blue-grad-end) 100%);
+  padding: 12px 14px; border-bottom-left-radius: 4px; display: flex; gap: 4px;
+  box-shadow: 0 4px 14px rgba(11, 65, 149, 0.25);
+}
+.cw-dot { width: 6px; height: 6px; border-radius: 50%; background: #ffffff; animation: cw-bounce 1.1s infinite; }
 .cw-dot:nth-child(2) { animation-delay: 0.15s; }
 .cw-dot:nth-child(3) { animation-delay: 0.3s; }
 @keyframes cw-bounce { 0%, 60%, 100% { transform: translateY(0); opacity: 0.5; } 30% { transform: translateY(-4px); opacity: 1; } }
@@ -176,69 +226,18 @@
 /* =========================================
    INPUT AREA
    ========================================= */
-#cw-inputbar { display: flex; gap: 8px; padding: 14px; background: #fff; border-top: 1px solid #F1F5F9; }
-#cw-input {
-  flex: 1; resize: none; border: 1px solid #DCE1E7; border-radius: 10px; padding: 10px 12px;
-  font-family: var(--cw-font); font-size: 15.5px; max-height: 90px; outline: none; background: #ffffff; color: var(--cw-ink);
+#cw-inputbar { display: flex; gap: 8px; padding: 14px; background: #fff; border-top: 1px solid #E2E8F0; }
+#cw-input { 
+  flex: 1; 
+  resize: none; 
+  border: 1px solid #CBD5E1; 
+  border-radius: 10px; 
+  padding: 10px 12px; 
+  font-family: var(--cw-font); 
+  font-size: 15.5px; 
+  outline: none; 
+  
+  /* 🌟 This hides the scrollbar completely 🌟 */
+  overflow: hidden; 
 }
-#cw-input::placeholder { color: var(--cw-muted); }
-#cw-input:focus { border-color: var(--cw-blue); box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.15); }
-#cw-send {
-  background: var(--cw-blue); border: none; color: #fff; width: 42px; border-radius: 10px; cursor: pointer;
-  display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: opacity 0.2s;
-}
-#cw-send:hover { opacity: 0.9; }
-#cw-send:disabled { opacity: 0.5; cursor: default; }
-#cw-send svg { width: 18px; height: 18px; }
-
-@media (max-width: 420px) {
-  #cw-panel { width: calc(100vw - 32px); right: 16px; bottom: 80px; }
-}
-
-/* --- WELCOME HEADER INSIDE CHAT --- */
-#cw-panel-welcome {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px 20px 10px 20px;
-  background: var(--cw-paper);
-  max-height: 300px;
-  overflow: hidden;
-  flex-shrink: 0;
-  transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.4s ease, margin 0.4s ease;
-}
-
-.cw-panel-avatar {
-  width: 70px;
-  height: 70px;
-  margin-bottom: 0;
-}
-
-#cw-panel-welcome h2 {
-  font-family: var(--cw-font);
-  font-size: 22px;
-  color: var(--cw-ink);
-  margin: 0;
-}
-#cw-panel-welcome.cw-hidden-header {
-  max-height: 0;
-  padding: 0;
-  margin: 0;
-  opacity: 0;
-}
-
-#cw-panel {
-  overflow-x: hidden;
-}
-#cw-messages {
-  overflow-x: hidden;
-}
-.cw-msg {
-  overflow-wrap: break-word;
-  word-break: break-word;
-  max-width: 100%;
-}
-.cw-bot-row {
-  max-width: 100%;
-  overflow-x: hidden;
-}
+#cw-send { background: var(--cw-blue); border: none; color: #fff; width: 42px; border-radius: 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; }

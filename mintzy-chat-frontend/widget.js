@@ -53,6 +53,7 @@
     );
 
     const msgs = el("div", { id: "cw-messages" });
+    msgs.style.minHeight = "0";
     
     // Assemble Main Panel
     const panel = el("div", { id: "cw-panel" }, 
@@ -145,8 +146,31 @@
     } finally { ui.send.disabled = false; }
   }
 
+
+  // Avoid overlapping with Cookie Consent banner
+  function adjustPositionForCookieBanner() {
+    const consent = localStorage.getItem("mintzy-cookie-consent");
+    const bubble = document.getElementById("cw-bubble");
+    const panel = document.getElementById("cw-panel");
+    if (consent === null) {
+      if (bubble) bubble.style.setProperty("bottom", "96px", "important");
+      if (panel) panel.style.setProperty("bottom", "160px", "important");
+    } else {
+      if (bubble) bubble.style.setProperty("bottom", "24px", "important");
+      if (panel) panel.style.setProperty("bottom", "90px", "important");
+    }
+  }
+
+  document.addEventListener("click", (e) => {
+    if (e.target && e.target.closest && e.target.closest("button") && 
+        (e.target.textContent.includes("Accept") || e.target.textContent.includes("Decline"))) {
+      setTimeout(adjustPositionForCookieBanner, 200);
+    }
+  });
+
   function init() {
-    const ui = build(); let opened = false;
+    const ui = build();
+    adjustPositionForCookieBanner(); let opened = false;
     ui.bubble.addEventListener("click", () => ui.panel.classList.add("cw-open"));
     ui.close.addEventListener("click", () => ui.panel.classList.remove("cw-open"));
     ui.splashClose.addEventListener("click", () => ui.panel.classList.remove("cw-open"));
