@@ -1,5 +1,6 @@
 """
 FastAPI backend for the website chat widget.
+# Trigger deploy: update system prompt brevity
 
 Responsibilities:
   1. Accept messages from the frontend widget (POST /chat)
