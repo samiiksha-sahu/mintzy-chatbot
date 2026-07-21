@@ -40,13 +40,14 @@ function cosineSimilarity(a, b) {
 function expandPriceNeighbors(results, allDocs) {
   const expanded = [...results];
   const seen = new Set(results.map((r) => `${r.source}#${r.chunk}`));
+  const queue = [...results];
 
-  for (const r of results) {
+  while (queue.length > 0) {
+    const r = queue.shift();
     if (!r.text.includes("₹")) continue;
 
     // Pull in adjacent chunks from the same file that also mention a price —
-    // this reassembles split pricing tiers (Mini/Alpha/Beta) without
-    // ever merging text before embedding.
+    // this transitively reassembles split pricing tiers (Mini/Alpha/Beta)
     const neighbors = allDocs.filter(
       (d) =>
         d.source === r.source &&
@@ -57,7 +58,9 @@ function expandPriceNeighbors(results, allDocs) {
 
     for (const n of neighbors) {
       seen.add(`${n.source}#${n.chunk}`);
-      expanded.push({ ...n, score: r.score });
+      const nWithScore = { ...n, score: r.score };
+      expanded.push(nWithScore);
+      queue.push(nWithScore);
     }
   }
 
