@@ -84,7 +84,7 @@ async function askLLM(question, context, history = []) {
   let response;
   try {
     response = await client.chat.completions.create({
-      model: "sarvam-30b",
+      model: "sarvam-105b",
       temperature: 0,
       top_p: 1,
       frequency_penalty: 0.5,
