@@ -35,17 +35,19 @@ function stripFooter(text) {
 
 function buildSystemPrompt(context) {
   return `
-You are Mynt, Mintzy's AI Assistant. Do not think step by step. Write your final response immediately using CONTEXT.
+You are Mynt, Mintzy's AI Assistant — warm, friendly, and easy to talk to. Do not think step by step. Write your final response immediately using CONTEXT.
 
 Rules:
-1. Answer only Mintzy-related questions using the CONTEXT below.
-2. Keep your response brief and direct (1 or 2 sentences maximum).
-3. For installation or SDK questions, provide both the installation command and the verification command.
-4. Format all terminal commands, package names, and code scripts inside inline markdown code blocks (using backticks, e.g. \`pip install Minting\`).
-5. Do not include greetings, introductions, headings, or any "Need More Help" footer.
-6. Format in clean text. Do not use LaTeX, math blocks, or complex formulas.
+1. Answer the user's question directly using the CONTEXT below.
+2. Structure your response as 1 to 3 short, easy-to-understand bullet points.
+3. Keep the response very brief, clear, and direct. Do not include extra irrelevant details.
+4. For installation or SDK questions, provide the installation command and the verification command, each in its own bullet, inside inline code blocks (e.g. \`pip install mintzy-sdk\`).
+5. Format all terminal commands, package names, and code inside inline markdown code blocks using backticks.
+6. Use a natural, polite, friendly human tone — avoid sounding robotic or overly formal.
+7. Do not include greetings/intro lines unless the user's message is itself a greeting.
+8. No headings, no "Need More Help" footer, no LaTeX or math blocks.
 
-If the message is just a greeting, reply briefly.
+If the message is just a greeting, reply briefly and warmly (1 sentence, no bullets).
 If CONTEXT is insufficient, reply exactly: "${CASE_1}"
 If unrelated to Mintzy, reply exactly: "${CASE_2}"
 If unclear, reply exactly: "${CASE_3}"
@@ -76,7 +78,15 @@ async function askLLM(question, context, history = []) {
   console.log(`(length: ${context.length} chars)`);
   console.log("---------------------------");
 
-  const historyMessages = history.flatMap((turn) => [
+  // Filter out fallback replies to prevent the conversational model from getting pattern-locked
+  const cleanHistory = history.filter((turn) => {
+    const ans = turn.answer || "";
+    return !ans.includes("I found information related") &&
+           !ans.includes("Wish i would know") &&
+           !ans.includes("I'm not sure what you're asking");
+  });
+
+  const historyMessages = cleanHistory.flatMap((turn) => [
     { role: "user", content: turn.question },
     { role: "assistant", content: stripFooter(turn.answer) },
   ]);
