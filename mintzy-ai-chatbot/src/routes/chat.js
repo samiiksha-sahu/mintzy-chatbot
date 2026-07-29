@@ -24,6 +24,8 @@ const CANNED_MARKERS = [
   "I found information related to your question",
 ];
 
+const SUPPORT_FOOTER = `\n\n---\nNeed More Help?\n\n📧 [support@mintzy.in](mailto:support@mintzy.in)\n\nIf you need more detailed or personalized assistance, the Mintzy team will be happy to help.`;
+
 const OFF_TOPIC_RESPONSE = `😄 Wish i would know! I'd probably get benched if I started answering these type of questions.
 
 I'm Mintzy's AI Assistant, so I can only help with questions related to Mintzy's products, platform, documentation, APIs, pricing, integrations, and services.
@@ -34,7 +36,7 @@ Try asking me something like:
 - Explain Seed.
 - What does Plugin do?
 - What pricing plans are available?
-- How can I contact Mintzy?`;
+- How can I contact Mintzy?` + SUPPORT_FOOTER;
 
 const KNOWN_TOPICS = {
   plugin: "plugin.txt",

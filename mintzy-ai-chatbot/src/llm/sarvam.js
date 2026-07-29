@@ -6,9 +6,11 @@ const client = new OpenAI({
   baseURL: "https://api.sarvam.ai/v1",
 });
 
+const SUPPORT_FOOTER = `\n\n---\nNeed More Help?\n\n📧 [support@mintzy.in](mailto:support@mintzy.in)\n\nIf you need more detailed or personalized assistance, the Mintzy team will be happy to help.`;
+
 const CASE_1 = `I found information related to your question in the Mintzy documentation, but there isn't enough detail available to provide a complete answer.
 
-For more information, please contact the Mintzy team.`;
+For more information, please contact the Mintzy team.` + SUPPORT_FOOTER;
 
 const CASE_2 = `😄 Wish i would know! I'd probably get benched if I started answering these type of questions.
 
@@ -20,13 +22,11 @@ Try asking me something like:
 - Explain Seed.
 - What does Plugin do?
 - What pricing plans are available?
-- How can I contact Mintzy?`;
+- How can I contact Mintzy?` + SUPPORT_FOOTER;
 
 const CASE_3 = `I'm not sure what you're asking.
 
-Could you rephrase your question or ask something related to Mintzy?`;
-
-const SUPPORT_FOOTER = `\n\n---\nNeed More Help?\n\n📧 [support@mintzy.in](mailto:support@mintzy.in)\n\nIf you need more detailed or personalized assistance, the Mintzy team will be happy to help.`;
+Could you rephrase your question or ask something related to Mintzy?` + SUPPORT_FOOTER;
 
 function stripFooter(text) {
   if (!text) return "";
@@ -129,7 +129,7 @@ async function askLLM(question, context, history = []) {
   if (message.includes("Nice try!")) return CASE_2;
   if (message.includes("I'm not sure what you're asking")) return CASE_3;
 
-  return stripFooter(message) + SUPPORT_FOOTER;
+  return stripFooter(message);
 }
 
 module.exports = askLLM;
