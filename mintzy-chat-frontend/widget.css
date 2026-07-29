@@ -199,6 +199,17 @@
 }
 .cw-msg.cw-bot a { color: #DBEAFE; text-decoration: underline; font-weight: 700; }
 
+.cw-msg.cw-bot ul {
+  list-style-type: disc !important;
+  padding-left: 20px !important;
+  margin: 10px 0 !important;
+}
+
+.cw-msg.cw-bot li {
+  display: list-item !important;
+  margin-bottom: 6px !important;
+}
+
 /* Code Blocks */
 .cw-msg.cw-bot pre {
   display: block; overflow-x: auto; max-width: 100%; white-space: pre;

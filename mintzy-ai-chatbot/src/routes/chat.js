@@ -28,18 +28,15 @@ const SUPPORT_FOOTER = `\n\n---\nNeed More Help?\n\n📧 [support@mintzy.in](mai
 
 const OFF_TOPIC_RESPONSE = `😄 Wish i would know! I'd probably get benched if I started answering these type of questions.
 
-I'm Mintzy's AI Assistant, so I can only help with questions related to Mintzy's products, platform, documentation, APIs, pricing, integrations, and services.
-
-Try asking me something like:
-
-- What is Mintzy?
-- Explain Seed.
-- What does Plugin do?
-- What pricing plans are available?
-- How can I contact Mintzy?` + SUPPORT_FOOTER;
+I'm Mintzy's AI Assistant, so I can only help with questions related to Mintzy's products, platform, documentation, APIs, pricing, integrations, and services.`;
 
 const KNOWN_TOPICS = {
   plugin: "plugin.txt",
+  pricing: "plugin.txt",
+  price: "plugin.txt",
+  prices: "plugin.txt",
+  cost: "plugin.txt",
+  plans: "plugin.txt",
   seed: "seed.txt",
   backtester: "backtest.txt",
   backtest: "backtest.txt",
@@ -105,7 +102,14 @@ function extractTopic(question) {
 function buildRetrievalQuery(question, recentHistory) {
   const lastTurn = recentHistory[recentHistory.length - 1];
   if (lastTurn && isFollowUp(question)) {
-    const topic = extractTopic(lastTurn.question);
+    const lastLower = lastTurn.question.toLowerCase();
+    let topic = "";
+    if (lastLower.includes("plugin")) topic = "plugin";
+    else if (lastLower.includes("seed")) topic = "seed";
+    else if (lastLower.includes("backtester") || lastLower.includes("backtest")) topic = "backtester";
+    else if (lastLower.includes("sdk") || lastLower.includes("api")) topic = "sdk";
+    else topic = extractTopic(lastTurn.question);
+
     return `${topic} ${question}`;
   }
   return question;
